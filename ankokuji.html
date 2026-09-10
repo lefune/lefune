@@ -4,633 +4,488 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>太平山 安國寺｜那覇市首里・臨済宗妙心寺派</title>
-<meta name="description" content="天順元年（一四五七）開創。沖縄・首里の杜に五百有余年。臨済宗妙心寺派 太平山 安國寺。ご葬儀・ご法要、納骨堂、永代供養、霊園「清ら結」、坐禅会のご案内。">
+<meta name="description" content="天順元年（一四五七）開創、首里の杜に五百有余年。臨済宗妙心寺派 太平山安國寺。ご葬儀・ご法要、納骨堂、永代供養、霊園「清ら結」、坐禅会のご案内。お電話 098-884-2735">
 <meta property="og:title" content="太平山 安國寺｜那覇市首里・臨済宗妙心寺派">
-<meta property="og:description" content="天順元年（一四五七）開創。首里の杜に五百有余年。">
+<meta property="og:description" content="首里の杜に五百有余年。ご葬儀・ご法要、納骨堂・永代供養のご相談を承ります。">
+<meta property="og:image" content="images/sunset-shuri.jpg">
 <meta property="og:type" content="website">
+<meta name="theme-color" content="#14130f">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
 <style>
-/* ============================================================
-   太平山 安國寺 — 和の意匠
-   色は墨・生成り・利休鼠・古色金を基調とし、余白を主役に据える
-   ============================================================ */
+/* ══════════════════════════════════════════════════════════
+   太平山 安國寺
+   ・読みやすさを最優先（本文16.5px／行間2.0／字送りは控えめ）
+   ・写真を主役に、余白と罫でリズムをつくる編集的レイアウト
+   ══════════════════════════════════════════════════════════ */
 
 :root{
-  --sumi:        #1c1b18;   /* 墨 */
-  --sumi-soft:   #35322c;
-  --rikyu:       #7c7869;   /* 利休鼠 */
-  --rikyu-pale:  #a8a496;
-  --kinari:      #f3efe6;   /* 生成り */
-  --washi:       #faf7f0;   /* 和紙 */
-  --washi-warm:  #ede7da;
-  --kin:         #9c7f43;   /* 古色金 */
-  --kin-pale:    #c9ab6d;   /* 淡金 */
-  --ai:          #26343f;   /* 藍鼠 */
-  --line:        rgba(28,27,24,.14);
-  --line-soft:   rgba(28,27,24,.07);
-  --ease:        cubic-bezier(.16,1,.3,1);
-  --mincho:      'Shippori Mincho B1','Noto Serif JP','Hiragino Mincho ProN','Yu Mincho','IPAMincho',serif;
-  --gothic:      'Zen Kaku Gothic New','Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic','IPAGothic',sans-serif;
-  --latin:       'Cormorant Garamond',serif;
-  --gut:         clamp(22px,5vw,64px);
-}
-*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0 }
+  /* 墨 */
+  --ink:        #14130f;
+  --ink-2:      #3a372f;
+  --ink-3:      #6a6659;
+  /* 地 */
+  --paper:      #f7f4ec;
+  --paper-2:    #efeadd;
+  --paper-3:    #e5dfcf;
+  /* 差し色 */
+  --gold:       #8c6d33;
+  --gold-2:     #c8a866;
+  --deep:       #1b2620;   /* 深緑墨 */
+  --deep-2:     #101815;
+  /* 罫 */
+  --rule:       rgba(20,19,15,.16);
+  --rule-2:     rgba(20,19,15,.08);
 
+  --ease:  cubic-bezier(.16,1,.3,1);
+  --min:   'Shippori Mincho B1','Noto Serif JP','Hiragino Mincho ProN','Yu Mincho','IPAMincho',serif;
+  --got:   'Zen Kaku Gothic New','Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic','IPAGothic',sans-serif;
+  --lat:   'Cormorant Garamond',serif;
+
+  --pad:   clamp(20px,4.6vw,72px);   /* 画面左右の余白 */
+  --rail:  0px;                       /* 左の柱の幅（PCで有効化） */
+  --hd:    68px;
+}
+@media (min-width:1180px){ :root{ --rail:64px } }
+
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0 }
 html{ scroll-behavior:smooth; -webkit-text-size-adjust:100% }
 
 body{
-  font-family:var(--gothic);
-  font-weight:300;
-  background:var(--washi);
-  color:var(--sumi);
-  line-height:2.15;
-  letter-spacing:.09em;
-  font-size:15px;
+  font-family:var(--got);
+  font-size:16.5px;          /* ← 読みやすさのため大きめに */
+  font-weight:400;
+  line-height:2.0;
+  letter-spacing:.04em;      /* ← 締めて可読性を上げる */
+  color:var(--ink);
+  background:var(--paper);
   overflow-x:hidden;
   -webkit-font-smoothing:antialiased;
-  text-rendering:optimizeLegibility;
+  padding-left:var(--rail);
 }
-
-/* 和紙の地合い — ごく淡く全体に敷く */
-body::before{
-  content:'';
-  position:fixed; inset:0;
-  pointer-events:none; z-index:1;
-  opacity:.35;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='.32'/%3E%3C/svg%3E");
-}
-
-img{ max-width:100%; display:block }
+img{ display:block; max-width:100%; height:auto }
 a{ color:inherit; text-decoration:none }
+::selection{ background:var(--gold); color:#fff }
+:focus-visible{ outline:2px solid var(--gold); outline-offset:3px }
 
-h1,h2,h3,h4,.mincho{
-  font-family:var(--mincho);
-  font-weight:400;
-  letter-spacing:.16em;
-  line-height:1.9;
+/* ── 見出し ── */
+h1,h2,h3,h4,.min{ font-family:var(--min); font-weight:500; letter-spacing:.1em; line-height:1.7 }
+
+/* ── 版面 ── */
+.wrap{ width:min(1180px,100%); margin-inline:auto; padding-inline:var(--pad) }
+.col { width:min(720px,100%) }               /* 本文の適正字数 */
+.center{ margin-inline:auto; text-align:center }
+
+.pad{ padding-block:clamp(72px,10vw,148px) }
+
+/* ── 章のしるし ── */
+.mark{ display:flex; align-items:center; gap:14px; margin-bottom:22px }
+.mark .kan{
+  font-family:var(--min); font-size:15px; font-weight:600; color:var(--gold);
+  letter-spacing:.2em;
 }
+.mark .bar{ width:38px; height:1px; background:var(--gold); opacity:.6; flex:0 0 38px }
+.mark .en{ font-family:var(--lat); font-style:italic; font-size:15px; letter-spacing:.2em; color:var(--ink-3) }
+.mark.mid{ justify-content:center }
 
-::selection{ background:var(--kin); color:var(--washi) }
-
-/* ---------- 円相のローダー ---------- */
-#enso{
-  position:fixed; inset:0; z-index:9999;
-  background:var(--washi);
-  display:grid; place-items:center;
-  transition:opacity 1.1s var(--ease), visibility 1.1s;
+.ttl{ font-size:clamp(27px,4vw,42px); line-height:1.6; margin-bottom:.7em }
+.ttl .en{
+  display:block; margin-top:14px;
+  font-family:var(--lat); font-style:italic; font-weight:400;
+  font-size:16px; letter-spacing:.16em; color:var(--ink-3);
 }
-#enso.done{ opacity:0; visibility:hidden }
-#enso svg{ width:104px; height:104px; overflow:visible }
-#enso circle{
-  fill:none; stroke:var(--sumi); stroke-width:2.2; stroke-linecap:round;
-  stroke-dasharray:264; stroke-dashoffset:264;
-  animation:draw 1.9s var(--ease) .15s forwards;
+.lead{ font-size:clamp(16.5px,1.7vw,18px); line-height:2.15; color:var(--ink-2) }
+.lead + .lead{ margin-top:1.6em }
+.lead strong{ font-weight:700; color:var(--ink) }
+
+/* ── 罫（画面端まで伸びる） ── */
+.edge-rule{ height:1px; background:var(--rule); width:100% }
+
+/* ══ 左の柱（PC） ══ */
+.pillar{
+  position:fixed; left:0; top:0; bottom:0; width:var(--rail); z-index:1200;
+  display:none; flex-direction:column; align-items:center; justify-content:space-between;
+  padding-block:22px; border-right:1px solid var(--rule);
+  background:var(--paper); mix-blend-mode:normal;
 }
-#enso .en-name{
-  margin-top:22px; text-align:center;
-  font-family:var(--mincho); font-size:12px; letter-spacing:.62em;
-  color:var(--rikyu); opacity:0;
-  animation:soft 1.3s var(--ease) 1.1s forwards;
+@media (min-width:1180px){ .pillar{ display:flex } }
+.pillar .nm{
+  writing-mode:vertical-rl; font-family:var(--min); font-size:15px; font-weight:600;
+  letter-spacing:.46em; color:var(--ink);
 }
-@keyframes draw{ to{ stroke-dashoffset:14 } }
-@keyframes soft{ to{ opacity:1 } }
+.pillar .lt{ font-family:var(--lat); font-style:italic; font-size:12px; letter-spacing:.2em; color:var(--ink-3);
+  writing-mode:vertical-rl }
+.pillar .dot{ width:5px; height:5px; border-radius:50%; background:var(--gold) }
 
-/* ---------- 見出し・共通部品 ---------- */
-.wrap{ width:min(1140px,100% - var(--gut)*2); margin-inline:auto }
-.narrow{ width:min(820px,100% - var(--gut)*2); margin-inline:auto }
-
-section{ position:relative; z-index:2 }
-section[id]{ scroll-margin-top:78px }
-#top{ scroll-margin-top:0 }
-
-.sec-pad{ padding-block:clamp(84px,13vw,176px) }
-
-/* 章のしるし：漢数字＋欧文 */
-.sec-mark{
-  display:flex; align-items:center; gap:16px;
-  margin-bottom:26px;
-}
-.sec-mark .num{
-  font-family:var(--mincho); font-size:12px; letter-spacing:.3em;
-  color:var(--kin);
-}
-.sec-mark .rule{ flex:0 0 46px; height:1px; background:var(--kin); opacity:.55 }
-.sec-mark .en{
-  font-family:var(--latin); font-style:italic;
-  font-size:13px; letter-spacing:.24em; color:var(--rikyu);
-}
-.sec-mark.center{ justify-content:center }
-
-.sec-title{
-  font-size:clamp(25px,4.1vw,40px);
-  line-height:1.75;
-  margin-bottom:clamp(30px,4.5vw,54px);
-}
-.sec-title small{
-  display:block; margin-top:16px;
-  font-family:var(--latin); font-style:italic; font-weight:300;
-  font-size:14px; letter-spacing:.2em; color:var(--rikyu);
-}
-
-.lede{
-  font-size:clamp(14px,1.6vw,16px);
-  line-height:2.5; color:var(--sumi-soft);
-  letter-spacing:.11em;
-}
-.lede + .lede{ margin-top:1.9em }
-
-/* 縦書き */
-.tate{
-  writing-mode:vertical-rl; text-orientation:upright;
-  font-feature-settings:"vkna" 1;
-}
-
-/* 罫 */
-.hairline{ height:1px; background:var(--line); border:0 }
-
-/* 七宝つなぎ — 区切りの淡い文様 */
-.shippo{
-  height:78px;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44'%3E%3Cg fill='none' stroke='%231c1b18' stroke-width='.7' opacity='.16'%3E%3Ccircle cx='0' cy='0' r='22'/%3E%3Ccircle cx='44' cy='0' r='22'/%3E%3Ccircle cx='0' cy='44' r='22'/%3E%3Ccircle cx='44' cy='44' r='22'/%3E%3Ccircle cx='22' cy='22' r='22'/%3E%3C/g%3E%3C/svg%3E");
-  background-size:44px 44px;
-  -webkit-mask-image:linear-gradient(90deg,transparent,#000 22%,#000 78%,transparent);
-  mask-image:linear-gradient(90deg,transparent,#000 22%,#000 78%,transparent);
-}
-
-/* 静かに立ちあがる — スクロール演出 */
-.rise{ opacity:0; transform:translateY(26px); transition:opacity 1.5s var(--ease), transform 1.5s var(--ease) }
-.rise.in{ opacity:1; transform:none }
-.rise.d1{ transition-delay:.12s } .rise.d2{ transition-delay:.24s }
-.rise.d3{ transition-delay:.36s } .rise.d4{ transition-delay:.48s }
-
-/* 引き線が伸びる */
-.drawline{ transform:scaleX(0); transform-origin:left; transition:transform 1.5s var(--ease) }
-.drawline.in{ transform:scaleX(1) }
-
-/* ---------- 頭：ヘッダ ---------- */
+/* ══ ヘッダ ══ */
 .hd{
-  position:fixed; inset:0 0 auto 0; z-index:1100;
+  position:fixed; top:0; left:var(--rail); right:0; z-index:1100;
+  height:var(--hd);
   display:flex; align-items:center; justify-content:space-between;
-  padding:22px var(--gut);
-  transition:background .8s var(--ease), padding .8s var(--ease), box-shadow .8s var(--ease);
+  padding-inline:var(--pad);
+  transition:background .6s var(--ease), box-shadow .6s var(--ease), color .6s var(--ease);
+  color:#fff;
 }
-.hd.solid{
-  background:rgba(250,247,240,.93);
-  backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
-  padding-block:14px;
-  box-shadow:0 1px 0 var(--line-soft);
-}
-.hd-logo{ display:flex; align-items:baseline; gap:13px; color:var(--washi); transition:color .8s var(--ease) }
-.hd.solid .hd-logo{ color:var(--sumi) }
-.hd-logo .kan{ font-family:var(--mincho); font-size:19px; letter-spacing:.3em }
-.hd-logo .sub{ font-family:var(--latin); font-size:10.5px; letter-spacing:.34em; opacity:.72; text-transform:uppercase }
+.hd.on{ background:rgba(247,244,236,.96); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+  box-shadow:0 1px 0 var(--rule-2); color:var(--ink) }
+.hd .logo{ display:flex; align-items:baseline; gap:12px; white-space:nowrap }
+.hd .logo b{ font-family:var(--min); font-size:20px; font-weight:600; letter-spacing:.16em }
+.hd .logo i{ font-family:var(--lat); font-style:italic; font-size:12.5px; letter-spacing:.22em; opacity:.72 }
+@media (min-width:1180px){ .hd .logo b{ display:none } .hd .logo i{ font-size:13.5px } }
 
-.hd-nav{ display:flex; align-items:center; gap:clamp(18px,2.4vw,34px) }
-.hd-nav a{
-  font-size:12.5px; letter-spacing:.17em; color:var(--washi);
-  position:relative; padding-block:5px; transition:color .8s var(--ease);
-}
-.hd.solid .hd-nav a{ color:var(--sumi-soft) }
-.hd-nav a::after{
-  content:''; position:absolute; left:0; bottom:0; width:100%; height:1px;
-  background:currentColor; transform:scaleX(0); transform-origin:right;
-  transition:transform .7s var(--ease);
-}
-.hd-nav a:hover::after{ transform:scaleX(1); transform-origin:left }
-
-.hd-tel{
+.nav{ display:flex; align-items:center; gap:clamp(14px,1.9vw,30px) }
+.nav a{ font-size:14.5px; letter-spacing:.06em; position:relative; padding-block:6px; white-space:nowrap }
+.nav a::after{ content:''; position:absolute; left:0; bottom:2px; width:100%; height:1px; background:currentColor;
+  transform:scaleX(0); transform-origin:right; transition:transform .55s var(--ease) }
+.nav a:hover::after{ transform:scaleX(1); transform-origin:left }
+.tel-btn{
   display:inline-flex; align-items:center; gap:9px;
-  border:1px solid currentColor; padding:9px 19px;
-  font-family:var(--mincho); font-size:12.5px; letter-spacing:.13em;
-  color:var(--washi); transition:color .8s var(--ease), background .5s var(--ease);
+  padding:11px 20px; border:1px solid currentColor;
+  font-family:var(--min); font-size:16px; font-weight:600; letter-spacing:.04em;
+  transition:background .4s, color .4s, border-color .4s;
 }
-.hd.solid .hd-tel{ color:var(--kin) }
-.hd-tel:hover{ background:var(--kin); color:var(--washi)!important; border-color:var(--kin) }
+.tel-btn:hover{ background:var(--gold); border-color:var(--gold); color:#fff }
+.hd.on .tel-btn{ color:#fff; background:var(--gold); border-color:var(--gold) }
+.hd.on .tel-btn:hover{ background:var(--ink); border-color:var(--ink) }
 
-/* 手前の三本線 */
-.burger{
-  display:none; width:40px; height:40px; border:0; background:none; cursor:pointer;
-  position:relative;
-}
-.burger span{
-  position:absolute; left:9px; width:22px; height:1px; background:var(--washi);
-  transition:transform .7s var(--ease), opacity .5s var(--ease), background .8s var(--ease);
-}
-.hd.solid .burger span{ background:var(--sumi) }
-.burger span:nth-child(1){ top:16px } .burger span:nth-child(2){ top:23px }
-body.menu-open{ overflow:hidden }
-body.menu-open .hd{ background:none; box-shadow:none }
-body.menu-open .hd-logo{ color:var(--sumi) }
-body.menu-open .burger span{ background:var(--sumi) }
-body.menu-open .burger span:nth-child(1){ transform:translateY(3.5px) rotate(23deg) }
-body.menu-open .burger span:nth-child(2){ transform:translateY(-3.5px) rotate(-23deg) }
+.burger{ display:none; width:44px; height:44px; border:0; background:none; cursor:pointer; position:relative }
+.burger span{ position:absolute; left:11px; width:22px; height:1.5px; background:currentColor;
+  transition:transform .6s var(--ease), background .6s }
+.burger span:nth-child(1){ top:19px } .burger span:nth-child(2){ top:26px }
+body.open .burger span{ background:var(--ink) }
+body.open .burger span:nth-child(1){ transform:translateY(3.5px) rotate(24deg) }
+body.open .burger span:nth-child(2){ transform:translateY(-3.5px) rotate(-24deg) }
 
-/* 引き戸のような開き */
+/* 引き戸メニュー */
 .drawer{
-  position:fixed; inset:0; z-index:1000;
-  background:var(--washi);
-  clip-path:inset(0 0 0 100%);
-  transition:clip-path 1s var(--ease);
-  display:flex; flex-direction:column; align-items:center; justify-content:flex-start;
-  gap:clamp(22px,4.5vh,42px);
-  padding:88px var(--gut) 40px;
+  position:fixed; inset:0 0 0 var(--rail); z-index:1000; background:var(--paper);
+  clip-path:inset(0 0 0 100%); transition:clip-path .9s var(--ease);
+  display:flex; flex-direction:column; align-items:center;
+  gap:clamp(18px,3.6vh,34px); padding:calc(var(--hd) + 26px) var(--pad) 34px;
   overflow-y:auto; overscroll-behavior:contain;
 }
-body.menu-open .drawer{ clip-path:inset(0 0 0 0) }
-.drawer nav{ display:flex; flex-direction:column; gap:clamp(16px,3.6vh,30px); text-align:center; margin-top:auto }
-.drawer nav a{
-  font-family:var(--mincho); font-size:clamp(19px,4.6vw,26px); letter-spacing:.24em;
-  opacity:0; transform:translateY(16px);
-  transition:opacity .9s var(--ease), transform .9s var(--ease), color .4s;
-}
-body.menu-open .drawer nav a{ opacity:1; transform:none }
-.drawer nav a:hover{ color:var(--kin) }
-.drawer nav a span{
-  display:block; font-family:var(--latin); font-style:italic;
-  font-size:11px; letter-spacing:.22em; color:var(--rikyu); margin-top:5px;
-}
-.drawer .d-foot{
-  flex:0 0 auto; text-align:center; margin-top:auto;
-  font-size:12.5px; color:var(--rikyu); letter-spacing:.14em; line-height:2.2;
-  padding-top:clamp(14px,2.4vh,24px); border-top:1px solid var(--line);
-  width:min(320px,100%);
-}
-.drawer .d-foot a{ color:var(--kin); font-family:var(--mincho); font-size:17px; letter-spacing:.1em }
+body.open{ overflow:hidden }
+body.open .drawer{ clip-path:inset(0 0 0 0) }
+body.open .hd{ background:none; box-shadow:none; color:var(--ink) }
+.drawer nav{ display:flex; flex-direction:column; gap:clamp(14px,3vh,26px); text-align:center; margin-top:auto }
+.drawer nav a{ font-family:var(--min); font-size:clamp(20px,4.8vw,26px); font-weight:500; letter-spacing:.16em;
+  opacity:0; transform:translateY(14px); transition:opacity .8s var(--ease), transform .8s var(--ease) }
+body.open .drawer nav a{ opacity:1; transform:none }
+.drawer nav a i{ display:block; font-family:var(--lat); font-style:italic; font-size:12.5px;
+  letter-spacing:.18em; color:var(--ink-3); margin-top:3px }
+.drawer .foot{ margin-top:auto; width:min(340px,100%); text-align:center; padding-top:20px;
+  border-top:1px solid var(--rule); font-size:14.5px; color:var(--ink-3); line-height:2 }
+.drawer .foot a{ display:block; font-family:var(--min); font-size:26px; font-weight:600; color:var(--gold); letter-spacing:.02em }
 
-/* ---------- 序：主景 ---------- */
-.hero{
-  position:relative; min-height:100svh;
-  display:flex; align-items:center;
-  overflow:hidden; background:var(--ai);
-}
-.hero-bg{
-  position:absolute; inset:0;
-  /* ▼ 実写に差し替える箇所：本堂・山門・境内の杜などの縦位置写真を推奨 ▼ */
-  background:
-    radial-gradient(120% 90% at 72% 18%, rgba(196,168,106,.22) 0%, transparent 58%),
-    linear-gradient(178deg,#2f3a3c 0%,#243033 42%,#171f21 100%);
-  transform:scale(1.1);
-  animation:kenburns 22s var(--ease) forwards;
-}
-@keyframes kenburns{ to{ transform:scale(1) } }
-
-/* 杜のシルエット — 写真が入るまでの意匠 */
-.hero-bg::after{
-  content:''; position:absolute; inset:0;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 900' preserveAspectRatio='xMidYMax slice'%3E%3Cg fill='%23000' opacity='.34'%3E%3Cpath d='M0 900V712c46-9 74-52 96-52s34 26 62 30 42-38 74-38 44 44 78 44 52-56 92-56 56 60 94 60 50-48 88-48 56 52 96 52 54-58 96-58 60 62 100 62 56-44 96-44 62 48 100 48 62-34 100-34 74 30 106 30 62-24 62-24V900z'/%3E%3C/g%3E%3Cg fill='%23000' opacity='.55'%3E%3Cpath d='M0 900V806c58-6 88-34 128-34s58 24 96 24 60-30 102-30 64 34 106 34 62-28 104-28 66 30 108 30 64-24 106-24 68 26 110 26 66-20 108-20 70 22 112 22 68-16 110-16 68 14 110 14 70-10 140-10v106z'/%3E%3C/g%3E%3C/svg%3E");
-  background-size:cover; background-position:bottom;
-}
-.hero::after{
-  content:''; position:absolute; inset:0;
-  background:linear-gradient(180deg,rgba(12,16,17,.52) 0%,rgba(12,16,17,.18) 38%,rgba(12,16,17,.62) 100%);
+/* ══ 写真の器 ══
+   画像が未設置でも崩れないよう、下地の色を必ず敷く ══ */
+figure{ position:relative; overflow:hidden; background:var(--tone,#8c8677) }
+figure img{ width:100%; height:100%; object-fit:cover; object-position:var(--pos,center) }
+figure.ratio{ aspect-ratio:var(--ar,3/2) }
+/* 余白に置くキャプション（縦書き）*/
+.cap{
+  position:absolute; right:14px; bottom:14px;
+  writing-mode:vertical-rl; font-family:var(--min); font-size:13px; letter-spacing:.22em;
+  color:#fff; text-shadow:0 1px 12px rgba(0,0,0,.65);
+  padding:10px 6px; border-right:1px solid rgba(255,255,255,.5);
 }
 
-.hero-in{
-  position:relative; z-index:3;
-  width:min(1140px,100% - var(--gut)*2); margin-inline:auto;
-  display:flex; justify-content:flex-end; padding-block:150px 120px;
-}
-.hero-copy{ display:flex; gap:clamp(18px,3vw,40px); align-items:flex-start; color:var(--washi) }
-
-.hero-catch{
+/* ══ 序：主景 ══ */
+.hero{ position:relative; min-height:100svh; display:flex; align-items:flex-end;
+  --tone:#2b3542; background:var(--tone); overflow:hidden }
+.hero .ph{ position:absolute; inset:0 }
+.hero .ph img{ width:100%; height:100%; object-fit:cover; object-position:center 42%;
+  transform:scale(1.08); animation:zoom 20s var(--ease) forwards }
+@keyframes zoom{ to{ transform:scale(1) } }
+.hero::after{ content:''; position:absolute; inset:0; z-index:1;
+  background:linear-gradient(180deg,rgba(10,14,18,.58) 0%,rgba(10,14,18,.10) 34%,rgba(10,14,18,.30) 62%,rgba(10,14,18,.80) 100%) }
+.hero-in{ position:relative; z-index:2; width:100%; padding:0 var(--pad) clamp(56px,9vh,104px) }
+.hero-copy{ display:flex; align-items:flex-end; gap:clamp(16px,2.6vw,34px); color:#fff }
+.hero h1{
   writing-mode:vertical-rl;
-  font-family:var(--mincho); font-weight:400;
-  font-size:clamp(29px,5.4vw,55px);
-  letter-spacing:.24em; line-height:1.62;
-  max-height:min(60vh,520px);
-  text-shadow:0 2px 34px rgba(0,0,0,.5);
+  font-size:clamp(30px,5.4vw,58px); font-weight:500;
+  letter-spacing:.2em; line-height:1.58;
+  max-height:min(58vh,470px);
+  text-shadow:0 2px 30px rgba(0,0,0,.55);
 }
-.hero-catch em{ font-style:normal; color:var(--kin-pale) }
+.hero h1 em{ font-style:normal; color:var(--gold-2) }
+.hero .sub{
+  writing-mode:vertical-rl; font-size:15px; letter-spacing:.26em; line-height:2.2;
+  color:rgba(255,255,255,.9); text-shadow:0 1px 14px rgba(0,0,0,.6); padding-bottom:4px;
+}
+/* 墨をおろすように現れる */
+.hero h1,.hero .sub{ opacity:0; -webkit-clip-path:inset(0 0 100% 0); clip-path:inset(0 0 100% 0);
+  animation:sumi 2.2s var(--ease) forwards }
+.hero h1{ animation-delay:.35s } .hero .sub{ animation-delay:.95s }
+@keyframes sumi{ 0%{opacity:0;clip-path:inset(0 0 100% 0);-webkit-clip-path:inset(0 0 100% 0)}
+  16%{opacity:1} 100%{opacity:1;clip-path:inset(0 0 -8% 0);-webkit-clip-path:inset(0 0 -8% 0)} }
 
-.hero-sub{
-  writing-mode:vertical-rl;
-  font-size:12.5px; letter-spacing:.4em; line-height:2.4;
-  color:rgba(250,247,240,.78);
-  padding-top:6px;
+.hero-foot{
+  position:relative; z-index:2; display:flex; align-items:center; justify-content:space-between;
+  gap:18px; padding:0 var(--pad) 26px; color:rgba(255,255,255,.82); flex-wrap:wrap;
 }
+.hero-foot .since{ font-family:var(--lat); font-style:italic; font-size:14px; letter-spacing:.24em }
+.hero-foot .scroll{ display:inline-flex; align-items:center; gap:12px; font-size:12.5px; letter-spacing:.28em }
+.hero-foot .scroll .ln{ width:52px; height:1px; background:rgba(255,255,255,.5); position:relative; overflow:hidden }
+.hero-foot .scroll .ln::after{ content:''; position:absolute; inset:0; background:var(--gold-2);
+  animation:run 2.4s var(--ease) infinite }
+@keyframes run{ 0%{transform:translateX(-100%)} 60%,100%{transform:translateX(100%)} }
 
-/* 墨をおろすように、上から静かに現れる */
-.hero-catch,.hero-sub{
-  opacity:0;
-  -webkit-clip-path:inset(0 0 100% 0); clip-path:inset(0 0 100% 0);
-  animation:sumi 2.4s var(--ease) forwards;
+/* ══ 一：ご挨拶（写真と本文を重ねる編集レイアウト）══ */
+.intro{ background:var(--paper); position:relative }
+.intro-grid{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(26px,4vw,64px); align-items:center }
+.intro-fig{ --ar:3/4; --tone:#6e7364; position:relative }
+.intro-fig::after{ content:''; position:absolute; inset:0; box-shadow:inset 0 0 0 1px rgba(255,255,255,.14) }
+.intro-txt .big{
+  font-family:var(--min); font-size:clamp(21px,2.7vw,30px); font-weight:500;
+  line-height:2.0; letter-spacing:.1em; margin-bottom:1.1em;
 }
-.hero-catch{ animation-delay:2.25s }
-.hero-sub{ animation-delay:2.85s; animation-duration:2s }
-@keyframes sumi{
-  0%{ opacity:0; -webkit-clip-path:inset(0 0 100% 0); clip-path:inset(0 0 100% 0) }
-  18%{ opacity:1 }
-  100%{ opacity:1; -webkit-clip-path:inset(0 0 -8% 0); clip-path:inset(0 0 -8% 0) }
-}
+.intro-txt .big em{ font-style:normal; color:var(--gold) }
+.sign{ margin-top:38px; padding-top:22px; border-top:1px solid var(--rule); font-size:15px; color:var(--ink-3) }
+.sign b{ display:block; margin-top:6px; font-family:var(--min); font-size:19px; font-weight:600; color:var(--ink) }
 
-.hero-side{
-  position:absolute; left:var(--gut); bottom:0; z-index:3;
-  display:flex; flex-direction:column; align-items:center; gap:20px;
-  color:rgba(250,247,240,.7);
-}
-.hero-side .txt{
-  writing-mode:vertical-rl;
-  font-family:var(--latin); font-style:italic;
-  font-size:11.5px; letter-spacing:.36em;
-}
-.hero-side .bar{ width:1px; height:80px; background:linear-gradient(rgba(250,247,240,.55),transparent) }
-.hero-side .bar::after{
-  content:''; display:block; width:1px; height:26px; background:var(--kin-pale);
-  animation:slide 2.6s var(--ease) infinite;
-}
-@keyframes slide{ 0%{ transform:translateY(-26px); opacity:0 } 40%{ opacity:1 } 100%{ transform:translateY(80px); opacity:0 } }
-
-/* 山号額 — 主景右上の落款風 */
-.hero-seal{
-  position:absolute; right:var(--gut); top:clamp(96px,14vh,150px); z-index:3;
-  width:62px; height:62px; display:grid; place-items:center;
-  border:1px solid rgba(201,171,109,.6);
-  color:var(--kin-pale); font-family:var(--mincho);
-  font-size:11px; letter-spacing:.1em; line-height:1.5; text-align:center;
-  opacity:0; animation:soft 1.6s var(--ease) 2.2s forwards;
-}
-
-/* ---------- 一：ご挨拶 ---------- */
-.greet{ background:var(--washi) }
-.greet .inner{ display:grid; grid-template-columns:minmax(0,1fr) auto; gap:clamp(30px,6vw,84px); align-items:start }
-.greet-tate{
-  writing-mode:vertical-rl;
-  font-family:var(--mincho); font-size:clamp(17px,2.5vw,23px);
-  letter-spacing:.2em; line-height:2.5;
-  max-height:min(66vh,560px);
-  color:var(--sumi);
-}
-.greet-tate em{ font-style:normal; color:var(--kin) }
-.greet-body{ padding-top:6px }
-.greet-sign{
-  margin-top:44px; padding-top:26px; border-top:1px solid var(--line);
-  font-family:var(--mincho); font-size:14px; letter-spacing:.2em; color:var(--rikyu);
-}
-.greet-sign strong{ display:block; margin-top:8px; font-weight:400; font-size:17px; color:var(--sumi) }
-
-/* ---------- 二：歴史 ---------- */
-.history{ background:var(--kinari); position:relative; overflow:hidden }
-.history::before{
-  content:'安國寺'; position:absolute; right:-.16em; top:50%; transform:translateY(-50%);
-  writing-mode:vertical-rl; font-family:var(--mincho);
-  font-size:clamp(150px,25vw,300px); color:var(--sumi); opacity:.032;
-  letter-spacing:.02em; pointer-events:none; user-select:none;
-}
-.hist-grid{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(34px,6vw,88px); align-items:center }
-
-.plate{
-  position:relative; aspect-ratio:4/5; max-width:100%;
-  background:
-    radial-gradient(90% 70% at 40% 26%, rgba(255,255,255,.3), transparent 62%),
-    linear-gradient(150deg,#d9d2c2 0%,#b9b1a0 48%,#8e8878 100%);
-  overflow:hidden;
-}
-.plate::after{
-  content:attr(data-cap);
-  position:absolute; left:0; bottom:0; padding:11px 16px;
-  font-size:11px; letter-spacing:.24em; color:rgba(255,255,255,.9);
-  background:linear-gradient(transparent,rgba(28,27,24,.5));
-  width:100%;
-}
-.plate.tall{ aspect-ratio:3/4 }
-.plate.wide{ aspect-ratio:16/10 }
-/* ▼ 写真を入れる際は .plate に <img> を直接置き、background を外してください ▼ */
-.plate img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover }
+/* ══ 二：沿革（全面写真＋帳）══ */
+.about{ position:relative; --tone:#3f5a3c; background:var(--tone) }
+.about .ph{ position:absolute; inset:0 }
+.about .ph img{ width:100%; height:100%; object-fit:cover; object-position:center 55% }
+.about::after{ content:''; position:absolute; inset:0;
+  background:linear-gradient(90deg,rgba(12,18,14,.90) 0%,rgba(12,18,14,.74) 46%,rgba(12,18,14,.30) 100%) }
+@media (max-width:900px){ .about::after{ background:linear-gradient(180deg,rgba(12,18,14,.72) 0%,rgba(12,18,14,.92) 42%) } }
+.about .inner{ position:relative; z-index:2; color:#fff }
+.about .mark .en,.about .sign{ color:rgba(255,255,255,.66) }
+.about .lead{ color:rgba(255,255,255,.88) }
+.about .lead strong{ color:var(--gold-2) }
 
 /* 年譜 */
-.nenpu{ margin-top:clamp(34px,5vw,58px); border-top:1px solid var(--line) }
-.nenpu dl{ display:grid; grid-template-columns:auto auto 1fr; gap:0 clamp(16px,2.6vw,34px);
-  padding:22px 4px; border-bottom:1px solid var(--line-soft); align-items:baseline }
-.nenpu dt{ font-family:var(--mincho); font-size:15px; letter-spacing:.14em; color:var(--kin); white-space:nowrap }
-.nenpu .wa{ font-family:var(--mincho); font-size:12px; color:var(--rikyu); letter-spacing:.14em; white-space:nowrap }
-.nenpu dd{ font-size:14px; color:var(--sumi-soft); line-height:2.1 }
+.nenpu{ margin-top:clamp(34px,5vw,54px); border-top:1px solid rgba(255,255,255,.24) }
+.nenpu .row{ display:grid; grid-template-columns:120px 1fr; gap:0 clamp(16px,2.4vw,32px);
+  padding:20px 0; border-bottom:1px solid rgba(255,255,255,.14); align-items:baseline }
+.nenpu .yr{ font-family:var(--min); font-size:19px; font-weight:600; color:var(--gold-2); letter-spacing:.08em }
+.nenpu .yr small{ display:block; font-size:12.5px; color:rgba(255,255,255,.5); letter-spacing:.14em;
+  font-family:var(--got); margin-top:2px }
+.nenpu .tx{ font-size:15.5px; line-height:2.05; color:rgba(255,255,255,.9) }
 
-/* ---------- 三：諸堂 ---------- */
-.halls{ background:var(--washi) }
-.hall-list{ display:grid; gap:clamp(52px,8vw,104px) }
-.hall{ display:grid; grid-template-columns:1.05fr 1fr; gap:clamp(26px,5vw,72px); align-items:center }
-.hall:nth-child(even) .hall-fig{ order:2 }
-.hall-no{
-  font-family:var(--latin); font-style:italic; font-size:13px;
-  letter-spacing:.24em; color:var(--kin); margin-bottom:12px;
+/* ══ 三：諸堂（編集的な交互組み）══ */
+.halls{ background:var(--paper-2) }
+.hall{ display:grid; grid-template-columns:1.08fr .92fr; gap:clamp(24px,4.2vw,68px); align-items:center;
+  padding-block:clamp(38px,5.4vw,64px); border-top:1px solid var(--rule) }
+.hall:first-of-type{ border-top:0 }
+.hall.rev .hf{ order:2 }
+.hall .hf{ --ar:4/3; position:relative }
+.hall .no{
+  position:absolute; left:0; top:0; z-index:2;
+  padding:12px 20px 10px; min-width:74px; text-align:center;
+  font-family:var(--lat); font-style:italic; font-size:34px; line-height:1;
+  color:#fff; background:rgba(20,19,15,.42);
+  backdrop-filter:blur(3px); -webkit-backdrop-filter:blur(3px);
+  border-right:1px solid rgba(255,255,255,.28); border-bottom:1px solid rgba(255,255,255,.28);
 }
-.hall h3{ font-size:clamp(21px,2.9vw,28px); margin-bottom:6px }
-.hall .yomi{ font-size:11.5px; letter-spacing:.32em; color:var(--rikyu); margin-bottom:20px }
-.hall p{ font-size:14px; line-height:2.35; color:var(--sumi-soft) }
-.hall .fee{
-  margin-top:24px; padding-top:18px; border-top:1px solid var(--line);
-  display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;
-}
-.hall .fee .lbl{ font-size:11px; letter-spacing:.24em; color:var(--rikyu) }
-.hall .fee .val{ font-family:var(--mincho); font-size:22px; letter-spacing:.06em; color:var(--sumi) }
-.hall .fee .val small{ font-size:12px; letter-spacing:.14em; color:var(--rikyu); margin-left:4px }
+.hall h3{ font-size:clamp(22px,2.8vw,30px); font-weight:600; margin-bottom:4px }
+.hall .rom{ font-family:var(--lat); font-style:italic; font-size:14px; letter-spacing:.2em; color:var(--ink-3); margin-bottom:18px }
+.hall p{ font-size:16px; line-height:2.1; color:var(--ink-2) }
+.hall .fee{ margin-top:22px; padding-top:16px; border-top:1px solid var(--rule);
+  display:flex; align-items:baseline; gap:10px; flex-wrap:wrap }
+.hall .fee .lb{ font-size:13.5px; color:var(--ink-3); letter-spacing:.1em }
+.hall .fee .vl{ font-family:var(--min); font-size:27px; font-weight:600; letter-spacing:.02em }
+.hall .fee .vl small{ font-size:15px; margin-left:2px }
+.hall .fee .nt{ font-size:13.5px; color:var(--ink-3) }
 
-/* ---------- 料金表 ---------- */
-.fees{ background:var(--kinari) }
-.fee-table{ width:100%; border-collapse:collapse; font-size:14px }
-.fee-table th,.fee-table td{ padding:22px 14px; border-bottom:1px solid var(--line); text-align:left; vertical-align:baseline }
-.fee-table thead th{
-  font-family:var(--gothic); font-weight:400; font-size:11px;
-  letter-spacing:.28em; color:var(--rikyu); padding-bottom:14px;
-  border-bottom:1px solid var(--sumi);
-}
-.fee-table tbody th{ font-family:var(--mincho); font-weight:400; font-size:16.5px; letter-spacing:.14em; white-space:nowrap }
-.fee-table .price{ font-family:var(--mincho); font-size:19px; letter-spacing:.05em; white-space:nowrap }
-.fee-table .note{ color:var(--rikyu); font-size:12.5px; line-height:2 }
-.fee-scroll{ overflow-x:auto; -webkit-overflow-scrolling:touch }
-.fee-foot{ margin-top:26px; font-size:12.5px; color:var(--rikyu); line-height:2.2 }
+/* ══ 料金表 ══ */
+.fees{ background:var(--paper) }
+.tbl-x{ overflow-x:auto; -webkit-overflow-scrolling:touch }
+table.fee{ width:100%; min-width:520px; border-collapse:collapse; font-size:16px }
+table.fee thead th{ font-family:var(--got); font-weight:500; font-size:13.5px; letter-spacing:.16em;
+  color:var(--ink-3); text-align:left; padding:0 12px 12px; border-bottom:1.5px solid var(--ink) }
+table.fee td,table.fee th[scope]{ padding:20px 12px; border-bottom:1px solid var(--rule); vertical-align:baseline; text-align:left }
+table.fee th[scope]{ font-family:var(--min); font-weight:600; font-size:18px; letter-spacing:.06em; white-space:nowrap }
+table.fee .pr{ font-family:var(--min); font-size:21px; font-weight:600; white-space:nowrap }
+table.fee .nt{ font-size:14px; color:var(--ink-3); line-height:1.9 }
+table.fee tbody tr:hover{ background:var(--paper-2) }
+.fees .note{ margin-top:22px; font-size:14.5px; color:var(--ink-3); line-height:2 }
 
-/* ---------- 納骨・永代供養 ---------- */
-.kuyo{ background:var(--ai); color:var(--washi) }
-.kuyo .sec-title{ color:var(--washi) }
-.kuyo .sec-mark .num,.kuyo .sec-mark .rule{ color:var(--kin-pale); background:var(--kin-pale) }
-.kuyo .sec-mark .num{ background:none }
-.kuyo .sec-mark .en{ color:rgba(250,247,240,.6) }
-.kuyo .lede{ color:rgba(250,247,240,.82) }
-.kuyo-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:rgba(250,247,240,.16); margin-top:clamp(34px,5vw,56px) }
-.kuyo-cell{ background:var(--ai); padding:clamp(28px,3.6vw,44px) clamp(20px,2.6vw,32px) }
-.kuyo-cell .k-lbl{ font-size:11px; letter-spacing:.28em; color:var(--kin-pale); margin-bottom:16px }
-.kuyo-cell .k-val{ font-family:var(--mincho); font-size:clamp(25px,3.4vw,33px); letter-spacing:.04em; line-height:1.5 }
-.kuyo-cell .k-val small{ font-size:12.5px; letter-spacing:.18em; color:rgba(250,247,240,.6); margin-left:6px }
-.kuyo-cell p{ margin-top:14px; font-size:13px; color:rgba(250,247,240,.68); line-height:2.15 }
-.kuyo-note{ margin-top:clamp(26px,3.4vw,40px); font-size:12.5px; line-height:2.3; color:rgba(250,247,240,.62) }
-.kuyo-note strong{ font-weight:400; color:var(--kin-pale) }
+/* ══ 五：納骨堂（深緑墨）══ */
+.kuyo{ background:var(--deep); color:#fff; position:relative; overflow:hidden }
+.kuyo .grid{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(28px,4.4vw,68px); align-items:center }
+.kuyo-fig{ --ar:4/5; --tone:#8a6f47 }
+.kuyo .mark .en{ color:rgba(255,255,255,.6) }
+.kuyo .lead{ color:rgba(255,255,255,.85) }
+.kuyo .lead strong{ color:var(--gold-2) }
+.tiers{ margin-top:clamp(26px,3.6vw,40px); border-top:1px solid rgba(255,255,255,.22) }
+.tier{ display:flex; align-items:baseline; justify-content:space-between; gap:16px;
+  padding:17px 0; border-bottom:1px solid rgba(255,255,255,.13) }
+.tier .t-l{ font-size:15.5px; color:rgba(255,255,255,.8) }
+.tier .t-r{ font-family:var(--min); font-size:24px; font-weight:600; color:#fff; white-space:nowrap }
+.tier .t-r small{ font-size:14px; margin-left:2px }
+.kuyo .note{ margin-top:20px; font-size:14.5px; color:rgba(255,255,255,.62); line-height:2 }
 
-/* ---------- 霊園 清ら結 ---------- */
-.reien{ background:var(--washi) }
-.reien-hero{
-  position:relative; aspect-ratio:21/9; min-height:280px;
-  width:100%; max-width:100%;
-  background:
-    radial-gradient(80% 120% at 20% 100%, rgba(156,127,67,.3), transparent 60%),
-    linear-gradient(120deg,#8fa39b 0%,#6f8880 44%,#3f524d 100%);
-  display:grid; place-items:center; overflow:hidden;
-}
-.reien-hero img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover }
-.reien-hero .rh-in{ position:relative; text-align:center; color:var(--washi); padding:20px }
-.reien-hero .rh-in .nm{ font-family:var(--mincho); font-size:clamp(30px,6vw,58px); letter-spacing:.3em; text-shadow:0 2px 26px rgba(0,0,0,.4) }
-.reien-hero .rh-in .yo{ margin-top:14px; font-size:11.5px; letter-spacing:.44em; color:rgba(250,247,240,.85) }
-.reien-pts{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(22px,3.6vw,48px); margin-top:clamp(36px,5vw,60px) }
-.reien-pt{ border-top:1px solid var(--sumi); padding-top:20px }
-.reien-pt .p-no{ font-family:var(--latin); font-style:italic; font-size:12px; letter-spacing:.24em; color:var(--kin) }
-.reien-pt h4{ font-size:18px; margin:10px 0 12px }
-.reien-pt p{ font-size:13.5px; color:var(--sumi-soft); line-height:2.2 }
+/* ══ 六：霊園（全面写真）══ */
+.reien{ position:relative; --tone:#2f6b8f; background:var(--tone); overflow:hidden }
+.reien .ph{ position:absolute; inset:0 }
+.reien .ph img{ width:100%; height:100%; object-fit:cover; object-position:center 45% }
+.reien::after{ content:''; position:absolute; inset:0;
+  background:linear-gradient(180deg,rgba(8,20,28,.62) 0%,rgba(8,20,28,.34) 40%,rgba(8,20,28,.86) 100%) }
+.reien .inner{ position:relative; z-index:2; color:#fff; text-align:center }
+.reien .mark .en{ color:rgba(255,255,255,.66) }
+.reien .nm{ font-family:var(--min); font-size:clamp(34px,6.4vw,64px); font-weight:600; letter-spacing:.24em;
+  text-shadow:0 2px 26px rgba(0,0,0,.5) }
+.reien .yomi{ margin-top:12px; font-family:var(--lat); font-style:italic; font-size:15px; letter-spacing:.22em;
+  color:rgba(255,255,255,.82) }
+.reien .lead{ color:rgba(255,255,255,.9); margin-top:26px }
+.pts{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; margin-top:clamp(36px,5vw,58px);
+  background:rgba(255,255,255,.22); text-align:left }
+.pt{ background:rgba(10,20,26,.58); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
+  padding:clamp(24px,3vw,34px) clamp(18px,2.4vw,28px) }
+.pt .n{ font-family:var(--lat); font-style:italic; font-size:14px; letter-spacing:.2em; color:var(--gold-2) }
+.pt h4{ font-size:19px; font-weight:600; margin:8px 0 10px; color:#fff }
+.pt p{ font-size:14.5px; line-height:2; color:rgba(255,255,255,.82) }
 
-/* ---------- いとなみ ---------- */
-.itonami{ background:var(--kinari) }
-.ito-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(24px,3.4vw,44px) }
-.ito-card{ background:var(--washi); padding:clamp(28px,3.4vw,44px); border:1px solid var(--line-soft); transition:transform .9s var(--ease), box-shadow .9s var(--ease) }
-.ito-card:hover{ transform:translateY(-6px); box-shadow:0 18px 46px -26px rgba(28,27,24,.4) }
-.ito-card .glyph{ font-family:var(--mincho); font-size:28px; color:var(--kin); letter-spacing:.1em; margin-bottom:20px }
-.ito-card h4{ font-size:19px; margin-bottom:8px }
-.ito-card .freq{ font-size:11px; letter-spacing:.26em; color:var(--rikyu); margin-bottom:18px }
-.ito-card p{ font-size:13.5px; color:var(--sumi-soft); line-height:2.2 }
+/* ══ 七：いとなみ ══ */
+.itonami{ background:var(--paper-2) }
+.cards{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(18px,2.6vw,32px) }
+.card{ background:var(--paper); border:1px solid var(--rule-2); padding:clamp(26px,3.2vw,40px);
+  transition:transform .7s var(--ease), box-shadow .7s var(--ease) }
+.card:hover{ transform:translateY(-5px); box-shadow:0 20px 46px -28px rgba(20,19,15,.5) }
+.card .gl{ width:52px; height:52px; display:grid; place-items:center; border:1px solid var(--gold);
+  border-radius:50%; font-family:var(--min); font-size:22px; font-weight:600; color:var(--gold); margin-bottom:20px }
+.card h4{ font-size:20px; font-weight:600; margin-bottom:6px }
+.card .fq{ font-size:13.5px; letter-spacing:.16em; color:var(--gold); margin-bottom:14px }
+.card p{ font-size:15.5px; line-height:2.05; color:var(--ink-2) }
 
-/* ---------- 十二支・巡拝 ---------- */
-.junishi{ background:var(--washi); text-align:center }
-.tori-mark{
-  width:132px; height:132px; margin:0 auto clamp(26px,4vw,40px);
-  display:grid; place-items:center; border-radius:50%;
-  border:1px solid var(--kin);
-  font-family:var(--mincho); font-size:46px; color:var(--kin); letter-spacing:.02em;
-  position:relative;
-}
-.tori-mark::after{
-  content:''; position:absolute; inset:9px; border-radius:50%; border:1px solid var(--line);
-}
+/* ══ 八：十二カ所巡り ══ */
+.junishi{ background:var(--paper) }
+.ju-grid{ display:grid; grid-template-columns:.85fr 1.15fr; gap:clamp(26px,4.4vw,66px); align-items:center }
+.ju-fig{ --ar:3/4; --tone:#4a2f28 }
+.tori{ width:96px; height:96px; display:grid; place-items:center; border:1px solid var(--gold);
+  border-radius:50%; font-family:var(--min); font-size:38px; font-weight:600; color:var(--gold);
+  position:relative; margin-bottom:26px }
+.tori::after{ content:''; position:absolute; inset:7px; border:1px solid var(--rule); border-radius:50% }
 
-/* ---------- アクセス ---------- */
-.access{ background:var(--kinari) }
-.acc-grid{ display:grid; grid-template-columns:1fr 1.15fr; gap:clamp(30px,5vw,72px); align-items:start }
-.acc-dl dl{ display:grid; grid-template-columns:88px 1fr; gap:0 20px; padding:20px 0; border-bottom:1px solid var(--line) }
-.acc-dl dl:first-child{ border-top:1px solid var(--line) }
-.acc-dl dt{ font-size:11px; letter-spacing:.26em; color:var(--rikyu); padding-top:.55em }
-.acc-dl dd{ font-size:14.5px; line-height:2.15 }
-.acc-dl dd a{ border-bottom:1px solid var(--line); transition:color .4s,border-color .4s }
-.acc-dl dd a:hover{ color:var(--kin); border-color:var(--kin) }
-.acc-dl .big{ font-family:var(--mincho); font-size:24px; letter-spacing:.06em; color:var(--sumi) }
-.map{ position:relative; aspect-ratio:4/3; background:#ddd8cc; overflow:hidden; filter:grayscale(.34) contrast(.94) }
+/* ══ 九：アクセス ══ */
+.access{ background:var(--paper-2) }
+.acc{ display:grid; grid-template-columns:1fr 1.1fr; gap:clamp(28px,4.4vw,64px); align-items:start }
+.info{ border-top:1px solid var(--rule) }
+.info .row{ display:grid; grid-template-columns:96px 1fr; gap:0 18px; padding:18px 0; border-bottom:1px solid var(--rule) }
+.info dt{ font-size:13.5px; letter-spacing:.14em; color:var(--ink-3); padding-top:.5em }
+.info dd{ font-size:16.5px; line-height:2 }
+.info dd.lg{ font-family:var(--min); font-size:28px; font-weight:600; letter-spacing:.02em }
+.info dd a{ border-bottom:1px solid var(--rule); transition:color .35s, border-color .35s }
+.info dd a:hover{ color:var(--gold); border-color:var(--gold) }
+.map{ position:relative; aspect-ratio:4/3; background:var(--paper-3); overflow:hidden; filter:grayscale(.3) contrast(.95) }
 .map iframe{ position:absolute; inset:0; width:100%; height:100%; border:0 }
 
-/* ---------- 結：お問い合わせ ---------- */
-.closing{
-  position:relative; text-align:center; color:var(--washi);
-  background:linear-gradient(168deg,#232c2f 0%,#181f21 100%);
-  overflow:hidden;
-}
-.closing::before{
-  content:''; position:absolute; inset:0;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='34'%3E%3Cg fill='none' stroke='%23c9ab6d' stroke-width='.8' opacity='.2'%3E%3Cpath d='M0 34c0-9.4 6.7-17 15-17s15 7.6 15 17M30 34c0-9.4 6.7-17 15-17s15 7.6 15 17'/%3E%3Cpath d='M-15 34c0-9.4 6.7-17 15-17s15 7.6 15 17'/%3E%3C/g%3E%3C/svg%3E");
-  background-size:60px 34px; opacity:.5;
-  -webkit-mask-image:radial-gradient(70% 70% at 50% 50%,#000,transparent);
-  mask-image:radial-gradient(70% 70% at 50% 50%,#000,transparent);
-}
+/* ══ 結：お問い合わせ ══ */
+.closing{ position:relative; --tone:#22303c; background:var(--tone); color:#fff; overflow:hidden; text-align:center }
+.closing .ph{ position:absolute; inset:0 }
+.closing .ph img{ width:100%; height:100%; object-fit:cover; object-position:center 38% }
+.closing::after{ content:''; position:absolute; inset:0; background:rgba(10,16,20,.7) }
 .closing .inner{ position:relative; z-index:2 }
-.closing .sec-title{ color:var(--washi) }
-.closing p{ color:rgba(250,247,240,.78); font-size:14.5px; line-height:2.4 }
-.cta-row{ display:flex; justify-content:center; gap:16px; flex-wrap:wrap; margin-top:clamp(32px,4.5vw,48px) }
-.btn{
-  display:inline-flex; align-items:center; justify-content:center; gap:11px;
-  min-width:236px; padding:20px 34px;
-  font-family:var(--mincho); font-size:15.5px; letter-spacing:.18em;
-  border:1px solid var(--kin-pale); color:var(--kin-pale);
-  position:relative; overflow:hidden; transition:color .7s var(--ease);
+.closing .mark .en{ color:rgba(255,255,255,.62) }
+.closing p{ font-size:17px; line-height:2.2; color:rgba(255,255,255,.9) }
+.big-tel{
+  display:inline-flex; flex-direction:column; align-items:center; gap:4px;
+  margin-top:clamp(28px,4vw,42px); padding:22px clamp(28px,5vw,58px);
+  border:1px solid var(--gold-2); color:#fff; transition:background .5s var(--ease), color .5s;
 }
-.btn::before{
-  content:''; position:absolute; inset:0; background:var(--kin-pale);
-  transform:scaleX(0); transform-origin:right; transition:transform .8s var(--ease); z-index:-1;
-}
-.btn:hover{ color:#181f21 }
-.btn:hover::before{ transform:scaleX(1); transform-origin:left }
-.btn.fill{ background:var(--kin-pale); color:#181f21 }
-.btn.fill:hover{ color:var(--kin-pale) }
-.btn.fill::before{ background:#181f21 }
-.btn span{ position:relative; z-index:2; display:inline-flex; align-items:center; gap:11px }
-.btn small{ font-size:11px; letter-spacing:.2em; opacity:.8 }
+.big-tel:hover{ background:var(--gold-2); color:var(--ink) }
+.big-tel .lb{ font-size:13.5px; letter-spacing:.24em; color:var(--gold-2) }
+.big-tel:hover .lb{ color:var(--ink) }
+.big-tel .nu{ font-family:var(--min); font-size:clamp(30px,5.4vw,46px); font-weight:600; letter-spacing:.03em; line-height:1.3 }
+.big-tel .hr{ font-size:13.5px; color:rgba(255,255,255,.72) }
+.big-tel:hover .hr{ color:var(--ink-2) }
 
-/* ---------- 脚：フッタ ---------- */
-.ft{ background:var(--sumi); color:rgba(250,247,240,.66); padding:clamp(56px,7vw,88px) 0 34px }
-.ft-top{ display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:clamp(28px,4vw,56px); padding-bottom:clamp(40px,5vw,62px); border-bottom:1px solid rgba(250,247,240,.13) }
-.ft-brand .kan{ font-family:var(--mincho); font-size:23px; letter-spacing:.28em; color:var(--washi) }
-.ft-brand .en{ font-family:var(--latin); font-style:italic; font-size:12px; letter-spacing:.26em; margin-top:9px; color:var(--rikyu-pale) }
-.ft-brand address{ font-style:normal; font-size:13px; line-height:2.2; margin-top:22px }
-.ft h5{ font-size:11px; letter-spacing:.28em; color:var(--kin-pale); margin-bottom:20px; font-weight:400; font-family:var(--gothic) }
-.ft ul{ list-style:none; display:grid; gap:13px }
-.ft ul a{ font-size:13px; transition:color .4s }
-.ft ul a:hover{ color:var(--kin-pale) }
-.ft-btm{ padding-top:28px; display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; font-size:11.5px; letter-spacing:.14em; color:rgba(250,247,240,.42) }
+/* ══ 脚 ══ */
+.ft{ background:var(--ink); color:rgba(255,255,255,.68); padding-block:clamp(50px,6.6vw,80px) 28px }
+.ft-top{ display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:clamp(26px,4vw,54px);
+  padding-bottom:clamp(34px,4.4vw,54px); border-bottom:1px solid rgba(255,255,255,.14) }
+.ft .bd b{ font-family:var(--min); font-size:23px; font-weight:600; letter-spacing:.2em; color:#fff }
+.ft .bd i{ display:block; font-family:var(--lat); font-style:italic; font-size:13px; letter-spacing:.2em;
+  color:rgba(255,255,255,.5); margin-top:8px }
+.ft address{ font-style:normal; font-size:15px; line-height:2.1; margin-top:20px }
+.ft address a{ border-bottom:1px solid rgba(255,255,255,.3) }
+.ft h5{ font-family:var(--got); font-weight:500; font-size:13.5px; letter-spacing:.2em; color:var(--gold-2); margin-bottom:16px }
+.ft ul{ list-style:none; display:grid; gap:11px }
+.ft ul a{ font-size:15px; transition:color .35s }
+.ft ul a:hover{ color:var(--gold-2) }
+.ft-bt{ padding-top:24px; display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap;
+  font-size:13px; color:rgba(255,255,255,.42) }
 
-/* 上へ */
-.totop{
-  position:fixed; right:22px; bottom:22px; z-index:800;
-  width:46px; height:46px; display:grid; place-items:center;
-  background:var(--sumi); color:var(--washi); font-size:13px;
-  opacity:0; visibility:hidden; transform:translateY(10px);
-  transition:opacity .7s var(--ease), transform .7s var(--ease), visibility .7s, background .4s;
-}
-.totop.on{ opacity:1; visibility:visible; transform:none }
-.totop:hover{ background:var(--kin) }
+/* ══ スマホの常時CTA ══ */
+.mbar{ position:fixed; left:0; right:0; bottom:0; z-index:1150; display:none;
+  background:rgba(20,19,15,.96); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+  padding:9px 10px calc(9px + env(safe-area-inset-bottom)); gap:8px }
+.mbar a{ flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1px;
+  padding:9px 6px; font-size:12px; letter-spacing:.06em; color:rgba(255,255,255,.86) }
+.mbar a.pri{ background:var(--gold); color:#fff }
+.mbar a b{ font-family:var(--min); font-size:16.5px; font-weight:600; letter-spacing:.02em }
 
-/* ============ 手のひらの中でも美しく ============ */
-@media (max-width:1000px){
-  .hist-grid,.hall,.acc-grid,.greet .inner{ grid-template-columns:1fr }
-  .hall:nth-child(even) .hall-fig{ order:0 }
-  .greet .inner{ gap:36px }
-  .greet-tate{ max-height:none; writing-mode:horizontal-tb; font-size:20px; letter-spacing:.14em; line-height:2.2 }
-  .kuyo-grid,.reien-pts,.ito-grid{ grid-template-columns:1fr }
-  .ft-top{ grid-template-columns:1fr 1fr }
-  .ft-brand{ grid-column:1/-1 }
+/* ══ スクロール演出 ══ */
+.up{ opacity:0; transform:translateY(22px); transition:opacity 1.2s var(--ease), transform 1.2s var(--ease) }
+.up.in{ opacity:1; transform:none }
+.up.d1{ transition-delay:.1s } .up.d2{ transition-delay:.2s } .up.d3{ transition-delay:.3s } .up.d4{ transition-delay:.4s }
+.wipe img{
+  clip-path:inset(0 0 100% 0); transform:scale(1.07);
+  transition:clip-path 1.5s var(--ease), transform 2.4s var(--ease);
 }
-@media (max-width:780px){
-  body{ font-size:14.5px }
-  .hd-nav{ display:none }
-  .burger{ display:block }
-  .hd{ padding:16px var(--gut) }
-  .hero-in{ justify-content:center; padding-block:130px 132px }
-  .hero-catch{ font-size:clamp(27px,8.4vw,40px); max-height:min(56vh,430px) }
-  .hero-seal{ display:none }
-  .hero-side{ left:auto; right:var(--gut); align-items:center }
-  .nenpu dl{ grid-template-columns:1fr; gap:6px }
-  .nenpu .wa{ display:inline-block; margin-left:10px }
-  .acc-dl dl{ grid-template-columns:1fr; gap:8px }
-  .btn{ width:100%; min-width:0 }
-  .reien-hero{ aspect-ratio:3/2 }
+.wipe.in img{ clip-path:inset(0 0 0 0); transform:scale(1) }
+.wipe .cap{ opacity:0; transition:opacity 1s var(--ease) .5s }
+.wipe.in .cap{ opacity:1 }
+
+/* ══════════ 手のひらの中でも ══════════ */
+@media (max-width:1080px){
+  .intro-grid,.kuyo .grid,.ju-grid,.acc{ grid-template-columns:1fr }
+  .hall{ grid-template-columns:1fr; gap:22px }
+  .hall.rev .hf{ order:0 }
+  .pts,.cards{ grid-template-columns:1fr }
+  .intro-fig{ --ar:16/10 } .kuyo-fig{ --ar:16/10 } .ju-fig{ --ar:16/10 }
+  .ft-top{ grid-template-columns:1fr 1fr } .ft .bd{ grid-column:1/-1 }
+}
+@media (max-width:820px){
+  :root{ --hd:60px }
+  body{ font-size:16px; padding-bottom:70px }
+  .nav{ display:none } .burger{ display:block }
+  .mbar{ display:flex }
+  /* 下部の常時CTAに主景がかぶらないよう、その分だけ高さを譲る */
+  .hero{ min-height:calc(100svh - 70px) }
+  .hero h1{ font-size:clamp(28px,8vw,40px); max-height:min(50vh,370px) }
+  .hero-copy{ justify-content:center }
+  .hero-in{ padding-bottom:clamp(30px,5vh,56px) }
+  .hd .logo i{ display:none }
+  .nenpu .row{ grid-template-columns:1fr; gap:4px }
+  .nenpu .yr small{ display:inline; margin-left:10px }
+  .info .row{ grid-template-columns:1fr; gap:4px }
   .ft-top{ grid-template-columns:1fr }
+  .cap{ font-size:12px; right:10px; bottom:10px }
 }
-
 @media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{ animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important }
-  .rise{ opacity:1; transform:none } .drawline{ transform:none }
-  .hero-catch,.hero-sub{ opacity:1; -webkit-clip-path:none; clip-path:none }
+  *,*::before,*::after{ animation-duration:.01ms!important; animation-iteration-count:1!important;
+    transition-duration:.01ms!important }
+  .up{ opacity:1; transform:none }
+  .wipe img{ clip-path:none; transform:none } .wipe .cap{ opacity:1 }
+  .hero h1,.hero .sub{ opacity:1; clip-path:none; -webkit-clip-path:none }
 }
 </style>
 </head>
 <body>
 
-<!-- ============ 円相 ============ -->
-<div id="enso" aria-hidden="true">
-  <div>
-    <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="42" transform="rotate(-96 50 50)"/></svg>
-    <div class="en-name">安國寺</div>
-  </div>
+<!-- ══ 左の柱（PC） ══ -->
+<div class="pillar" aria-hidden="true">
+  <span class="dot"></span>
+  <span class="nm">太平山　安國寺</span>
+  <span class="lt">Est. 1457</span>
 </div>
 
-<!-- ============ 頭 ============ -->
+<!-- ══ ヘッダ ══ -->
 <header class="hd" id="hd">
-  <a href="#top" class="hd-logo">
-    <span class="kan">太平山 安國寺</span>
-    <span class="sub">Ankokuji</span>
-  </a>
-  <nav class="hd-nav">
-    <a href="#about">安國寺について</a>
+  <a href="#top" class="logo"><b>太平山 安國寺</b><i>TAIHEIZAN ANKOKUJI</i></a>
+  <nav class="nav">
+    <a href="#about">沿革</a>
     <a href="#halls">諸堂と御法要</a>
+    <a href="#fees">ご利用料金</a>
     <a href="#kuyo">納骨・永代供養</a>
     <a href="#reien">霊園 清ら結</a>
-    <a href="#itonami">いとなみ</a>
     <a href="#access">アクセス</a>
-    <a href="tel:098-884-2735" class="hd-tel">098-884-2735</a>
+    <a href="tel:098-884-2735" class="tel-btn">098-884-2735</a>
   </nav>
   <button class="burger" id="burger" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer">
     <span></span><span></span>
@@ -639,351 +494,303 @@ body.menu-open .drawer nav a{ opacity:1; transform:none }
 
 <div class="drawer" id="drawer">
   <nav>
-    <a href="#about">安國寺について<span>About</span></a>
-    <a href="#halls">諸堂と御法要<span>Halls</span></a>
-    <a href="#fees">ご利用料金<span>Fees</span></a>
-    <a href="#kuyo">納骨・永代供養<span>Memorial</span></a>
-    <a href="#reien">霊園 清ら結<span>Cemetery</span></a>
-    <a href="#itonami">いとなみ<span>Practice</span></a>
-    <a href="#access">アクセス<span>Access</span></a>
+    <a href="#intro">ごあいさつ<i>Greeting</i></a>
+    <a href="#about">安國寺の沿革<i>History</i></a>
+    <a href="#halls">諸堂と御法要<i>Halls</i></a>
+    <a href="#fees">ご利用料金<i>Fees</i></a>
+    <a href="#kuyo">納骨・永代供養<i>Memorial</i></a>
+    <a href="#reien">霊園「清ら結」<i>Cemetery</i></a>
+    <a href="#itonami">お寺のいとなみ<i>Practice</i></a>
+    <a href="#access">アクセス<i>Access</i></a>
   </nav>
-  <div class="d-foot">
-    お問い合わせ　<a href="tel:098-884-2735">098-884-2735</a><br>
-    〒903-0826　沖縄県那覇市首里寒川町一ノ二
+  <div class="foot">
+    お問い合わせ
+    <a href="tel:098-884-2735">098-884-2735</a>
+    〒903-0826　那覇市首里寒川町1-2
   </div>
 </div>
 
-<!-- ============ 序 ============ -->
+<!-- ══ 序：主景 ══ -->
 <section class="hero" id="top">
-  <div class="hero-bg"></div>
-  <!-- ▼ 実写を使う場合はこの位置に <img class="hero-photo"> を置き、.hero-bg の背景を外してください ▼ -->
-  <div class="hero-seal">太平山<br>安國寺</div>
+  <div class="ph">
+    <!-- ① 首里から望む夕景（海と街並み）-->
+    <img src="images/sunset-shuri.jpg" alt="首里の高台から望む那覇の街と海に沈む夕日">
+  </div>
   <div class="hero-in">
     <div class="hero-copy">
-      <h1 class="hero-catch">五百有余年、<br><em>首里の杜</em>に。</h1>
-      <p class="hero-sub">臨済宗妙心寺派　天順元年開創</p>
+      <h1>首里の杜に、<br><em>五百有余年</em>。</h1>
+      <p class="sub">臨済宗妙心寺派　太平山 安國寺</p>
     </div>
   </div>
-  <div class="hero-side">
-    <span class="txt">Scroll</span>
-    <span class="bar"></span>
+  <div class="hero-foot">
+    <span class="since">Since 1457</span>
+    <span class="scroll"><span class="ln"></span>SCROLL</span>
   </div>
 </section>
 
-<!-- ============ 一・ご挨拶 ============ -->
-<section class="greet sec-pad" id="greeting">
-  <div class="wrap inner">
-    <div class="greet-body">
-      <div class="sec-mark rise"><span class="num">壱</span><span class="rule drawline"></span><span class="en">Greeting</span></div>
-      <h2 class="sec-title rise d1">ごあいさつ<small>A quiet place, kept for five centuries</small></h2>
-      <p class="lede rise d2">
+<!-- ══ 一：ごあいさつ ══ -->
+<section class="intro pad" id="intro">
+  <div class="wrap intro-grid">
+    <figure class="intro-fig ratio wipe">
+      <!-- ③ 石門とシーサー（山門）-->
+      <img src="images/sanmon-ishimon.jpg" alt="琉球石灰岩の石門とシーサー">
+      <figcaption class="cap">山門</figcaption>
+    </figure>
+    <div class="intro-txt">
+      <div class="mark up"><span class="kan">壱</span><span class="bar"></span><span class="en">Greeting</span></div>
+      <p class="big up d1">手を合わせる、<br>それだけで<em>整う</em>場所へ。</p>
+      <p class="lead up d2">
         琉球の古都・首里。石畳の坂をのぼり、赤瓦の家並みを抜けたところに、安國寺の山門は静かに開いております。
-        天順元年、この地に一寺が建てられてよりおよそ五百七十年。王府の時代も、戦火の時代も、そしていまも、
+        天順元年、この地に一寺が建てられてよりおよそ<strong>五百七十年</strong>。王府の時代も、戦火の時代も、そしていまも、
         ここは首里に生きる人びとの祈りを受けとめてまいりました。
       </p>
-      <p class="lede rise d2">
-        堂内に一歩お入りいただくと、外の喧噪がふっと遠のきます。線香のかおり、木の匂い、
-        風がとおる音。とくべつな作法は要りません。手を合わせる、ただそれだけで十分に整う場所であればよい——
-        私どもはそう考えております。
+      <p class="lead up d2">
+        堂内に一歩お入りいただくと、外の喧噪がふっと遠のきます。とくべつな作法は要りません。
+        ご葬儀やご法要はもとより、納骨堂・永代供養、霊園のご相談まで、どうぞ肩の力を抜いてお訪ねください。
       </p>
-      <p class="lede rise d2">
-        ご葬儀やご法要はもとより、納骨堂・永代供養、霊園のご相談、月に一度の坐禅会まで。
-        どうぞ、肩の力を抜いてお訪ねください。
+      <div class="sign up d3">臨済宗妙心寺派　太平山 安國寺<b>住職</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 二：沿革 ══ -->
+<section class="about pad" id="about">
+  <div class="ph">
+    <!-- ④ 境内俯瞰（伽藍全景）-->
+    <img src="images/aerial-keidai.jpg" alt="緑に囲まれた安國寺の境内を上空から望む">
+  </div>
+  <div class="wrap inner">
+    <div class="col">
+      <div class="mark up"><span class="kan">弐</span><span class="bar"></span><span class="en">History</span></div>
+      <h2 class="ttl up d1">安國寺の沿革<span class="en">Five and a half centuries in Shuri</span></h2>
+      <p class="lead up d2">
+        山号を<strong>太平山</strong>、御本尊に<strong>不動明王</strong>をおまつりする臨済宗妙心寺派の禅刹です。
+        創建は天順元年（一四五七）。足利尊氏公が全国に安国寺を建てた「一国一寺」の例にならい、
+        開山・<strong>熙山周雍禅師</strong>によって開かれました。
       </p>
-      <div class="greet-sign rise d3">
-        臨済宗妙心寺派　太平山 安國寺
-        <strong>住職</strong>
-      </div>
+      <p class="lead up d2">
+        去る沖縄戦で伽藍のことごとくを焼失いたしましたが、檀信徒の皆さまのお力添えにより再建。
+        いまも首里十二カ所巡りの<strong>酉年の寺</strong>として、多くの方にお参りをいただいております。
+      </p>
     </div>
-    <p class="greet-tate mincho rise d1">
-      手を合わせる、<br>それだけで<em>整う</em>場所へ。
-    </p>
+    <div class="nenpu up d3">
+      <div class="row"><div class="yr">一四五七<small>天順元年</small></div><div class="tx">尚泰久王の御世、熙山周雍禅師により首里久場川に開創。</div></div>
+      <div class="row"><div class="yr">一六七四<small>延宝二年</small></div><div class="tx">現在地・首里寒川町へ移転。以後、首里の禅刹として法灯を継ぐ。</div></div>
+      <div class="row"><div class="yr">一九四五<small>昭和二十年</small></div><div class="tx">沖縄戦により伽藍を焼失。什宝・記録の多くを失う。</div></div>
+      <div class="row"><div class="yr">戦　後<small>—</small></div><div class="tx">檀信徒の護持により本堂を再建。諸堂を順次整備し、今日にいたる。</div></div>
+      <div class="row"><div class="yr">現　在<small>—</small></div><div class="tx">首里十二カ所巡り「酉年」の札所。開創より五百七十年を数える。</div></div>
+    </div>
   </div>
 </section>
 
-<div class="shippo" aria-hidden="true"></div>
-
-<!-- ============ 二・安國寺について ============ -->
-<section class="history sec-pad" id="about">
+<!-- ══ 三：諸堂 ══ -->
+<section class="halls pad" id="halls">
   <div class="wrap">
-    <div class="hist-grid">
-      <div class="rise">
-        <!-- ▼ 本堂または山門の写真（縦位置）に差し替え ▼ -->
-        <figure class="plate tall" data-cap="本堂 ─ Main Hall">
-          <!-- <img src="images/hondo.jpg" alt="安國寺 本堂"> -->
-        </figure>
-      </div>
-      <div>
-        <div class="sec-mark rise"><span class="num">弐</span><span class="rule drawline"></span><span class="en">About</span></div>
-        <h2 class="sec-title rise d1">安國寺について<small>Taiheizan Ankokuji</small></h2>
-        <p class="lede rise d2">
-          安國寺は、沖縄県那覇市首里寒川町にある臨済宗妙心寺派の禅刹です。山号を<strong>太平山</strong>、
-          御本尊に<strong>不動明王</strong>をおまつりしております。
-        </p>
-        <p class="lede rise d2">
-          創建は天順元年（一四五七）。第六代琉球国王・尚泰久王の御世、足利尊氏公が全国に安国寺を建てた
-          「一国一寺」の例にならい、開山・<strong>熙山周雍禅師</strong>によって開かれました。
-          当初は首里久場川のほとりにありましたが、一六七四年に現在の寒川の地へ移っております。
-        </p>
-        <p class="lede rise d2">
-          去る沖縄戦において伽藍のことごとくを焼失いたしましたが、檀信徒の皆さまのお力添えにより再建。
-          いまも首里十二カ所巡りの<strong>酉年の寺</strong>として、多くの方にお参りをいただいております。
-        </p>
-      </div>
+    <div class="col center" style="margin-bottom:clamp(38px,5vw,62px)">
+      <div class="mark mid up"><span class="kan">参</span><span class="bar"></span><span class="en">Halls</span></div>
+      <h2 class="ttl up d1">諸堂と御法要<span class="en">Halls &amp; Ceremonies</span></h2>
+      <p class="lead up d2">ご葬儀・ご法要の規模に応じて、四つのお堂・お部屋をお選びいただけます。<br>
+        境内には駐車場を備えております。</p>
     </div>
 
-    <div class="nenpu rise">
-      <dl><dt>一四五七</dt><dd class="wa">天順元年</dd><dd>尚泰久王の御世、熙山周雍禅師により首里久場川に開創。</dd></dl>
-      <dl><dt>一六七四</dt><dd class="wa">延宝二年</dd><dd>現在地・首里寒川町へ移転。以後、首里の禅刹として法灯を継ぐ。</dd></dl>
-      <dl><dt>一九四五</dt><dd class="wa">昭和二十年</dd><dd>沖縄戦により伽藍を焼失。什宝・記録の多くを失う。</dd></dl>
-      <dl><dt>戦後</dt><dd class="wa">─</dd><dd>檀信徒の護持により本堂を再建。諸堂を順次整備し、今日にいたる。</dd></dl>
-      <dl><dt>現在</dt><dd class="wa">─</dd><dd>首里十二カ所巡り「酉年」の札所。開創より五百七十年を数える。</dd></dl>
-    </div>
+    <article class="hall">
+      <figure class="hf ratio wipe" style="--tone:#6b5433">
+        <span class="no">I</span>
+        <!-- ⑥ 本堂内陣（祭壇と供花）-->
+        <img src="images/hall-hondo.jpg" alt="安國寺 本堂の内陣">
+        <figcaption class="cap">本堂 内陣</figcaption>
+      </figure>
+      <div class="up d1">
+        <h3>本　堂</h3>
+        <p class="rom">Hondō</p>
+        <p>御本尊・不動明王をおまつりする伽藍の中心。ご本葬をはじめ、大切な節目の御法要を、荘厳のととのった空間で執り行っていただけます。</p>
+        <div class="fee"><span class="lb">使用料</span><span class="vl">200,000<small>円</small></span><span class="nt">お布施すべて込み</span></div>
+      </div>
+    </article>
+
+    <article class="hall rev">
+      <figure class="hf ratio wipe" style="--tone:#a8563a">
+        <span class="no">II</span>
+        <!-- ② 赤瓦の屋根とブーゲンビリア -->
+        <img src="images/hall-junishido.jpg" alt="赤瓦の屋根を持つ十二支堂">
+        <figcaption class="cap">十二支堂</figcaption>
+      </figure>
+      <div class="up d1">
+        <h3>十二支堂ホール</h3>
+        <p class="rom">Jūnishidō Hall</p>
+        <p>十二支の守り本尊にちなむお堂に併設した式場です。首里十二カ所巡りの札所としての由緒を映した、落ちついたしつらえ。ご親族中心のご葬儀に適しております。</p>
+        <div class="fee"><span class="lb">使用料</span><span class="vl">130,000<small>円</small></span><span class="nt">お布施すべて込み</span></div>
+      </div>
+    </article>
+
+    <article class="hall">
+      <figure class="hf ratio wipe" style="--tone:#8a7a5c">
+        <span class="no">III</span>
+        <!-- ⑧ 和室（円窓・畳）-->
+        <img src="images/hall-amidado.jpg" alt="阿弥陀堂ホールの和室">
+        <figcaption class="cap">阿弥陀堂</figcaption>
+      </figure>
+      <div class="up d1">
+        <h3>阿弥陀堂ホール</h3>
+        <p class="rom">Amidadō Hall</p>
+        <p>四十九日、一周忌、三回忌など、年回のご法事に多くお使いいただいているお部屋です。ご会食の席としてもご利用いただけます。</p>
+        <div class="fee"><span class="lb">法事使用料</span><span class="vl">40,000<small>円</small></span><span class="nt">お布施すべて込み</span></div>
+      </div>
+    </article>
+
+    <article class="hall rev">
+      <figure class="hf ratio wipe" style="--tone:#7d6f55">
+        <span class="no">IV</span>
+        <!-- 通夜室（和室の写真をご用意ください）-->
+        <img src="images/hall-tsuya.jpg" alt="通夜室">
+        <figcaption class="cap">通夜室</figcaption>
+      </figure>
+      <div class="up d1">
+        <h3>通夜室</h3>
+        <p class="rom">Tsuya Room</p>
+        <p>故人さまとご家族が、最後の夜を静かにお過ごしいただくためのお部屋です。お付き添いのままご宿泊いただけます。</p>
+        <div class="fee"><span class="lb">一泊二日</span><span class="vl">30,000<small>円</small></span><span class="nt">追加一泊 10,000円</span></div>
+      </div>
+    </article>
   </div>
 </section>
 
-<!-- ============ 三・諸堂 ============ -->
-<section class="halls sec-pad" id="halls">
+<!-- ══ 四：料金 ══ -->
+<section class="fees pad" id="fees">
   <div class="wrap">
-    <div class="sec-mark center rise"><span class="num">参</span><span class="rule drawline"></span><span class="en">Halls</span></div>
-    <h2 class="sec-title rise d1" style="text-align:center">諸堂と御法要のご案内<small>Halls &amp; Ceremonies</small></h2>
-    <p class="lede narrow rise d2" style="text-align:center; margin-bottom:clamp(50px,7vw,86px)">
-      境内には、ご葬儀・ご法要の規模やご参列の人数に応じてお選びいただける四つのお堂・お部屋がございます。
-      いずれもバリアフリーに配慮し、駐車場も備えております。
-    </p>
-
-    <div class="hall-list">
-
-      <article class="hall">
-        <div class="hall-fig rise">
-          <figure class="plate wide" data-cap="本堂 ─ Hondō">
-            <!-- <img src="images/hondo-in.jpg" alt="本堂 内観"> -->
-          </figure>
-        </div>
-        <div class="rise d1">
-          <p class="hall-no">Ⅰ</p>
-          <h3>本　堂</h3>
-          <p class="yomi">HONDŌ</p>
-          <p>御本尊・不動明王をおまつりする、伽藍の中心となるお堂です。ご葬儀・ご本葬をはじめ、
-             大切な節目の御法要を、荘厳のととのった空間で執り行っていただけます。</p>
-          <div class="fee"><span class="lbl">使用料</span><span class="val">200,000<small>円</small></span><span class="lbl">お布施すべて込み</span></div>
-        </div>
-      </article>
-
-      <article class="hall">
-        <div class="hall-fig rise">
-          <figure class="plate wide" data-cap="十二支堂ホール ─ Jūnishidō">
-            <!-- <img src="images/junishido.jpg" alt="十二支堂ホール"> -->
-          </figure>
-        </div>
-        <div class="rise d1">
-          <p class="hall-no">Ⅱ</p>
-          <h3>十二支堂ホール</h3>
-          <p class="yomi">JŪNISHIDŌ HALL</p>
-          <p>十二支の守り本尊にちなむお堂に併設した式場です。首里十二カ所巡りの札所としての
-             当山の由緒を映した、落ちついたしつらえ。ご親族中心のご葬儀に適しております。</p>
-          <div class="fee"><span class="lbl">使用料</span><span class="val">130,000<small>円</small></span><span class="lbl">お布施すべて込み</span></div>
-        </div>
-      </article>
-
-      <article class="hall">
-        <div class="hall-fig rise">
-          <figure class="plate wide" data-cap="阿弥陀堂ホール ─ Amidadō">
-            <!-- <img src="images/amidado.jpg" alt="阿弥陀堂ホール"> -->
-          </figure>
-        </div>
-        <div class="rise d1">
-          <p class="hall-no">Ⅲ</p>
-          <h3>阿弥陀堂ホール</h3>
-          <p class="yomi">AMIDADŌ HALL</p>
-          <p>四十九日、一周忌、三回忌など、年回のご法事に多くお使いいただいているお部屋です。
-             ご会食の席としてもご利用いただけます。</p>
-          <div class="fee"><span class="lbl">法事使用料</span><span class="val">40,000<small>円</small></span><span class="lbl">お布施すべて込み</span></div>
-        </div>
-      </article>
-
-      <article class="hall">
-        <div class="hall-fig rise">
-          <figure class="plate wide" data-cap="通夜室 ─ Tsuya Room">
-            <!-- <img src="images/tsuya.jpg" alt="通夜室"> -->
-          </figure>
-        </div>
-        <div class="rise d1">
-          <p class="hall-no">Ⅳ</p>
-          <h3>通夜室</h3>
-          <p class="yomi">TSUYA ROOM</p>
-          <p>故人さまとご家族が、最後の夜を静かにお過ごしいただくためのお部屋です。
-             お付き添いのままご宿泊いただけます。</p>
-          <div class="fee"><span class="lbl">一泊二日</span><span class="val">30,000<small>円</small></span><span class="lbl">追加一泊 10,000円</span></div>
-        </div>
-      </article>
-
+    <div class="col">
+      <div class="mark up"><span class="kan">肆</span><span class="bar"></span><span class="en">Fees</span></div>
+      <h2 class="ttl up d1">ご利用料金<span class="en">Price List</span></h2>
     </div>
-  </div>
-</section>
-
-<!-- ============ 料金表 ============ -->
-<section class="fees sec-pad" id="fees">
-  <div class="narrow">
-    <div class="sec-mark rise"><span class="num">肆</span><span class="rule drawline"></span><span class="en">Fees</span></div>
-    <h2 class="sec-title rise d1">ご利用料金<small>Price List</small></h2>
-    <div class="fee-scroll rise d2">
-      <table class="fee-table">
+    <div class="tbl-x up d2">
+      <table class="fee">
         <thead><tr><th>区分</th><th>料金</th><th>備考</th></tr></thead>
         <tbody>
-          <tr><th>本堂</th><td class="price">200,000円</td><td class="note">お布施すべて込み</td></tr>
-          <tr><th>十二支堂ホール</th><td class="price">130,000円</td><td class="note">お布施すべて込み</td></tr>
-          <tr><th>阿弥陀堂ホール</th><td class="price">40,000円</td><td class="note">法事使用料・お布施すべて込み</td></tr>
-          <tr><th>通夜室</th><td class="price">30,000円</td><td class="note">一泊二日／追加一泊 10,000円</td></tr>
-          <tr><th>納骨堂</th><td class="price">30,000円 〜 40,000円</td><td class="note">年間使用料（30,000円／35,000円／40,000円の三種）※消費税別</td></tr>
-          <tr><th>永代供養</th><td class="price">ご相談</td><td class="note">随時うけたまわっております</td></tr>
+          <tr><th scope="row">本堂</th><td class="pr">200,000円</td><td class="nt">お布施すべて込み</td></tr>
+          <tr><th scope="row">十二支堂ホール</th><td class="pr">130,000円</td><td class="nt">お布施すべて込み</td></tr>
+          <tr><th scope="row">阿弥陀堂ホール</th><td class="pr">40,000円</td><td class="nt">法事使用料・お布施すべて込み</td></tr>
+          <tr><th scope="row">通夜室</th><td class="pr">30,000円</td><td class="nt">一泊二日／追加一泊 10,000円</td></tr>
+          <tr><th scope="row">納骨堂</th><td class="pr">30,000円〜40,000円</td><td class="nt">年間使用料（三種）※消費税別</td></tr>
+          <tr><th scope="row">永代供養</th><td class="pr">ご相談</td><td class="nt">随時うけたまわっております</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="fee-foot rise d3">
+    <p class="note up d3">
       ※ 表示は目安の金額です。ご事情やご希望により承り方が異なる場合がございますので、まずはお気軽にご相談ください。<br>
       ※ 納骨堂使用料には別途消費税を申し受けます。
     </p>
   </div>
 </section>
 
-<!-- ============ 五・納骨・永代供養 ============ -->
-<section class="kuyo sec-pad" id="kuyo">
-  <div class="wrap">
-    <div class="sec-mark rise"><span class="num">伍</span><span class="rule drawline"></span><span class="en">Memorial</span></div>
-    <h2 class="sec-title rise d1">納骨堂・永代供養<small>Ossuary &amp; Perpetual Memorial</small></h2>
-    <p class="lede narrow rise d2" style="margin-inline:0">
-      「お墓を継ぐ人がいない」「遠方に住んでいて、お参りがむずかしい」。
-      近ごろ、そうしたご相談をいただくことが増えました。当山では、御堂のうちに納骨堂をご用意し、
-      またお申し出により永代のご供養をお引き受けしております。どうぞ一人で抱えこまず、
-      まずはお話をお聞かせください。
-    </p>
-    <div class="kuyo-grid">
-      <div class="kuyo-cell rise d1">
-        <p class="k-lbl">納骨堂 ／ 年間使用料　其の一</p>
-        <p class="k-val">30,000<small>円</small></p>
-        <p>お棚の位置に応じて三種をご用意しております。</p>
+<!-- ══ 五：納骨堂・永代供養 ══ -->
+<section class="kuyo pad" id="kuyo">
+  <div class="wrap grid">
+    <figure class="kuyo-fig ratio wipe">
+      <!-- ⑦ 納骨堂（木製の納骨壇）-->
+      <img src="images/nokotsudo.jpg" alt="安國寺の納骨堂">
+      <figcaption class="cap">納骨堂</figcaption>
+    </figure>
+    <div>
+      <div class="mark up"><span class="kan">伍</span><span class="bar"></span><span class="en">Memorial</span></div>
+      <h2 class="ttl up d1">納骨堂・永代供養<span class="en">Ossuary &amp; Perpetual Memorial</span></h2>
+      <p class="lead up d2">
+        「お墓を継ぐ人がいない」「遠方に住んでいて、お参りがむずかしい」。
+        近ごろ、そうしたご相談をいただくことが増えました。当山では御堂のうちに納骨堂をご用意し、
+        またお申し出により<strong>永代のご供養</strong>をお引き受けしております。
+        どうぞ一人で抱えこまず、まずはお話をお聞かせください。
+      </p>
+      <div class="tiers up d3">
+        <div class="tier"><span class="t-l">納骨堂　年間使用料　其の一</span><span class="t-r">30,000<small>円</small></span></div>
+        <div class="tier"><span class="t-l">納骨堂　年間使用料　其の二</span><span class="t-r">35,000<small>円</small></span></div>
+        <div class="tier"><span class="t-l">納骨堂　年間使用料　其の三</span><span class="t-r">40,000<small>円</small></span></div>
+        <div class="tier"><span class="t-l">永代供養</span><span class="t-r">ご相談<small>随時</small></span></div>
       </div>
-      <div class="kuyo-cell rise d2">
-        <p class="k-lbl">納骨堂 ／ 年間使用料　其の二</p>
-        <p class="k-val">35,000<small>円</small></p>
-        <p>お参りのしやすい高さのお棚でございます。</p>
-      </div>
-      <div class="kuyo-cell rise d3">
-        <p class="k-lbl">納骨堂 ／ 年間使用料　其の三</p>
-        <p class="k-val">40,000<small>円</small></p>
-        <p>ゆとりのある区画をご希望の方に。</p>
-      </div>
-    </div>
-    <p class="kuyo-note rise d3">
-      ※ いずれも年間の使用料です。別途消費税を申し受けます。<br>
-      ※ <strong>永代供養</strong>につきましては、ご事情をうかがったうえで随時おうけしております。まずはお電話にてご相談ください。
-    </p>
-  </div>
-</section>
-
-<!-- ============ 六・霊園 清ら結 ============ -->
-<section class="reien sec-pad" id="reien">
-  <div class="wrap">
-    <div class="sec-mark rise"><span class="num">陸</span><span class="rule drawline"></span><span class="en">Cemetery</span></div>
-    <h2 class="sec-title rise d1">霊園「清ら結」<small>Churayui Memorial Park</small></h2>
-    <div class="reien-hero rise d2">
-      <!-- ▼ 霊園の写真に差し替え ▼ -->
-      <!-- <img src="images/churayui.jpg" alt="霊園 清ら結"> -->
-      <div class="rh-in">
-        <p class="nm">清ら結</p>
-        <p class="yo">CHURAYUI ─ 摩文仁　国定公園内</p>
-      </div>
-    </div>
-    <div class="reien-pts">
-      <div class="reien-pt rise d1">
-        <p class="p-no">Ⅰ</p>
-        <h4>永代にわたる、ご供養</h4>
-        <p>五百七十年の法灯を継ぐ安國寺が、責任をもって末永くおまつりいたします。承継のご心配は要りません。</p>
-      </div>
-      <div class="reien-pt rise d2">
-        <p class="p-no">Ⅱ</p>
-        <h4>海を望む、静かな園地</h4>
-        <p>摩文仁の国定公園内。潮風と光のとどく高台に、区画をご用意しております。</p>
-      </div>
-      <div class="reien-pt rise d3">
-        <p class="p-no">Ⅲ</p>
-        <h4>どなたにもやさしく</h4>
-        <p>園内はバリアフリー。休憩所・水場・駐車場を整え、お参りの負担をやわらげます。</p>
-      </div>
+      <p class="note up d3">※ いずれも年間の使用料です。別途消費税を申し受けます。お棚の位置に応じて三種をご用意しております。</p>
     </div>
   </div>
 </section>
 
-<div class="shippo" aria-hidden="true"></div>
-
-<!-- ============ 七・いとなみ ============ -->
-<section class="itonami sec-pad" id="itonami">
-  <div class="wrap">
-    <div class="sec-mark center rise"><span class="num">漆</span><span class="rule drawline"></span><span class="en">Practice</span></div>
-    <h2 class="sec-title rise d1" style="text-align:center">お寺のいとなみ<small>Zazen, Yoga &amp; Dharma Talks</small></h2>
-    <p class="lede narrow rise d2" style="text-align:center; margin-bottom:clamp(44px,6vw,72px)">
-      お寺は、法事のときだけの場所ではありません。ひと月に一度、どなたにも開いている時間があります。
-      檀信徒の方でなくても、はじめての方でも、どうぞ。
-    </p>
-    <div class="ito-grid">
-      <div class="ito-card rise d1">
-        <p class="glyph">坐</p>
-        <h4>坐　禅　会</h4>
-        <p class="freq">月 一 回</p>
-        <p>背筋をのばし、呼吸をかぞえる。ただそれだけの時間です。作法は当日ご案内いたしますので、手ぶらでお越しください。</p>
-      </div>
-      <div class="ito-card rise d2">
-        <p class="glyph">息</p>
-        <h4>ヨ　ガ</h4>
-        <p class="freq">月 一 回</p>
-        <p>お堂の床にマットを敷いて。からだをほぐし、息をととのえる。坐禅とあわせてご参加いただけます。</p>
-      </div>
-      <div class="ito-card rise d3">
-        <p class="glyph">法</p>
-        <h4>法　話　会</h4>
-        <p class="freq">不 定 期</p>
-        <p>禅のことば、暮らしのなかの仏教。かたくならず、お茶を飲みながらのひとときです。</p>
-      </div>
+<!-- ══ 六：霊園 清ら結 ══ -->
+<section class="reien pad" id="reien">
+  <div class="ph">
+    <!-- ⑤ 海を望む霊園 -->
+    <img src="images/reien-churayui.jpg" alt="海を望む高台に広がる霊園 清ら結">
+  </div>
+  <div class="wrap inner">
+    <div class="mark mid up"><span class="kan">陸</span><span class="bar"></span><span class="en">Cemetery</span></div>
+    <p class="nm up d1">清ら結</p>
+    <p class="yomi up d1">CHURAYUI — 摩文仁　国定公園内</p>
+    <p class="lead col center up d2">潮風のとどく高台に、海をひろく見渡す園地。<br>五百七十年の法灯を継ぐ安國寺が、永代にわたっておまつりいたします。</p>
+    <div class="pts">
+      <div class="pt up d1"><p class="n">I</p><h4>永代にわたる、ご供養</h4><p>安國寺が責任をもって末永くおまつりいたします。承継のご心配は要りません。</p></div>
+      <div class="pt up d2"><p class="n">II</p><h4>海を望む、静かな園地</h4><p>摩文仁の国定公園内。潮風と光のとどく高台に区画をご用意しております。</p></div>
+      <div class="pt up d3"><p class="n">III</p><h4>どなたにもやさしく</h4><p>園内はバリアフリー。休憩所・水場・駐車場を整え、お参りの負担をやわらげます。</p></div>
     </div>
   </div>
 </section>
 
-<!-- ============ 十二支・巡拝 ============ -->
-<section class="junishi sec-pad">
-  <div class="narrow">
-    <div class="tori-mark rise">酉</div>
-    <div class="sec-mark center rise d1"><span class="num">捌</span><span class="rule drawline"></span><span class="en">Pilgrimage</span></div>
-    <h2 class="sec-title rise d1">首里十二カ所巡り<small>The Twelve Temples of Shuri</small></h2>
-    <p class="lede rise d2">
-      首里の町にはむかしから、十二支それぞれの守り本尊をおまつりする十二の札所をめぐる
-      「首里十二カ所巡り」の習わしがございます。安國寺は、そのうち<strong>酉年生まれの方の札所</strong>。
-      御本尊・不動明王が、一年の息災をお守りくださいます。
-    </p>
-    <p class="lede rise d2">
-      年のはじめには、酉年の方はもちろん、多くの方が手を合わせにお越しになります。
-      御朱印・お守りについては、寺務所までお問い合わせください。
-    </p>
+<!-- ══ 七：いとなみ ══ -->
+<section class="itonami pad" id="itonami">
+  <div class="wrap">
+    <div class="col center" style="margin-bottom:clamp(34px,4.6vw,56px)">
+      <div class="mark mid up"><span class="kan">漆</span><span class="bar"></span><span class="en">Practice</span></div>
+      <h2 class="ttl up d1">お寺のいとなみ<span class="en">Zazen, Yoga &amp; Dharma Talks</span></h2>
+      <p class="lead up d2">お寺は、法事のときだけの場所ではありません。<br>檀信徒の方でなくても、はじめての方でも、どうぞ。</p>
+    </div>
+    <div class="cards">
+      <div class="card up d1"><div class="gl">坐</div><h4>坐禅会</h4><p class="fq">月 一 回</p>
+        <p>背筋をのばし、呼吸をかぞえる。ただそれだけの時間です。作法は当日ご案内いたしますので、手ぶらでお越しください。</p></div>
+      <div class="card up d2"><div class="gl">息</div><h4>ヨガ</h4><p class="fq">月 一 回</p>
+        <p>お堂の床にマットを敷いて。からだをほぐし、息をととのえる。坐禅とあわせてご参加いただけます。</p></div>
+      <div class="card up d3"><div class="gl">法</div><h4>法話会</h4><p class="fq">不 定 期</p>
+        <p>禅のことば、暮らしのなかの仏教。かたくならず、お茶を飲みながらのひとときです。</p></div>
+    </div>
   </div>
 </section>
 
-<!-- ============ 九・アクセス ============ -->
-<section class="access sec-pad" id="access">
+<!-- ══ 八：十二カ所巡り ══ -->
+<section class="junishi pad">
+  <div class="wrap ju-grid">
+    <figure class="ju-fig ratio wipe">
+      <!-- ⑨ 御本尊 不動明王 -->
+      <img src="images/fudo-myoo.jpg" alt="御本尊 不動明王">
+      <figcaption class="cap">御本尊　不動明王</figcaption>
+    </figure>
+    <div>
+      <div class="tori up">酉</div>
+      <div class="mark up d1"><span class="kan">捌</span><span class="bar"></span><span class="en">Pilgrimage</span></div>
+      <h2 class="ttl up d1">首里十二カ所巡り<span class="en">The Twelve Temples of Shuri</span></h2>
+      <p class="lead up d2">
+        首里の町にはむかしから、十二支それぞれの守り本尊をおまつりする十二の札所をめぐる習わしがございます。
+        安國寺は、そのうち<strong>酉年生まれの方の札所</strong>。御本尊・不動明王が、一年の息災をお守りくださいます。
+      </p>
+      <p class="lead up d2">
+        年のはじめには、酉年の方はもちろん、多くの方が手を合わせにお越しになります。
+        御朱印・お守りについては、寺務所までお問い合わせください。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 九：アクセス ══ -->
+<section class="access pad" id="access">
   <div class="wrap">
-    <div class="sec-mark rise"><span class="num">玖</span><span class="rule drawline"></span><span class="en">Access</span></div>
-    <h2 class="sec-title rise d1">お問い合わせ・アクセス<small>Contact &amp; Access</small></h2>
-    <div class="acc-grid">
-      <div class="acc-dl rise d2">
-        <dl><dt>寺　号</dt><dd class="big">太平山　安國寺</dd></dl>
-        <dl><dt>宗　派</dt><dd>臨済宗妙心寺派</dd></dl>
-        <dl><dt>御本尊</dt><dd>不動明王</dd></dl>
-        <dl><dt>所在地</dt><dd>〒903-0826<br>沖縄県那覇市首里寒川町1-2</dd></dl>
-        <dl><dt>電　話</dt><dd class="big"><a href="tel:098-884-2735">098-884-2735</a></dd></dl>
-        <dl><dt>ＦＡＸ</dt><dd>098-884-0099</dd></dl>
-        <dl><dt>駐車場</dt><dd>境内に完備しております</dd></dl>
-        <dl><dt>お参り</dt><dd>境内は終日開放しております。<br>寺務所へのご用向きは、お電話にてご確認ください。</dd></dl>
-      </div>
-      <div class="map rise d3">
+    <div class="col" style="margin-bottom:clamp(30px,4vw,48px)">
+      <div class="mark up"><span class="kan">玖</span><span class="bar"></span><span class="en">Access</span></div>
+      <h2 class="ttl up d1">お問い合わせ・アクセス<span class="en">Contact &amp; Access</span></h2>
+    </div>
+    <div class="acc">
+      <dl class="info up d2">
+        <div class="row"><dt>寺　号</dt><dd class="lg">太平山　安國寺</dd></div>
+        <div class="row"><dt>宗　派</dt><dd>臨済宗妙心寺派</dd></div>
+        <div class="row"><dt>御本尊</dt><dd>不動明王</dd></div>
+        <div class="row"><dt>所在地</dt><dd>〒903-0826<br>沖縄県那覇市首里寒川町1-2</dd></div>
+        <div class="row"><dt>電　話</dt><dd class="lg"><a href="tel:098-884-2735">098-884-2735</a></dd></div>
+        <div class="row"><dt>ＦＡＸ</dt><dd>098-884-0099</dd></div>
+        <div class="row"><dt>駐車場</dt><dd>境内に完備しております</dd></div>
+        <div class="row"><dt>お参り</dt><dd>ご参拝・ご相談の受付は、<br>お電話にてご確認ください。</dd></div>
+      </dl>
+      <div class="map up d3">
         <iframe title="太平山 安國寺 地図" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
           src="https://maps.google.com/maps?q=%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E9%A6%96%E9%87%8C%E5%AF%92%E5%B7%9D%E7%94%BA1-2%20%E5%AE%89%E5%9C%8B%E5%AF%BA&amp;z=17&amp;output=embed"></iframe>
       </div>
@@ -991,102 +798,113 @@ body.menu-open .drawer nav a{ opacity:1; transform:none }
   </div>
 </section>
 
-<!-- ============ 結 ============ -->
-<section class="closing sec-pad">
-  <div class="narrow inner">
-    <div class="sec-mark center rise"><span class="num">結</span><span class="rule drawline"></span><span class="en">Contact</span></div>
-    <h2 class="sec-title rise d1">まずは、お電話ください。<small>Please feel free to call us</small></h2>
-    <p class="rise d2">
+<!-- ══ 結 ══ -->
+<section class="closing pad">
+  <div class="ph">
+    <!-- ① 夕景（主景と同じ写真で締める）-->
+    <img src="images/sunset-shuri.jpg" alt="">
+  </div>
+  <div class="wrap inner">
+    <div class="mark mid up"><span class="kan">結</span><span class="bar"></span><span class="en">Contact</span></div>
+    <h2 class="ttl up d1">まずは、お電話ください。</h2>
+    <p class="col center up d2">
       ご葬儀・ご法要のご依頼、納骨堂や永代供養、霊園のご相談。<br>
-      どんな小さなことでも、遠慮なくお声がけください。<br>
       仏事のならわしについてのご質問だけでも結構です。
     </p>
-    <div class="cta-row rise d3">
-      <a href="tel:098-884-2735" class="btn fill"><span>電話をかける<small>098-884-2735</small></span></a>
-      <a href="#access" class="btn"><span>アクセスを見る</span></a>
-    </div>
+    <a href="tel:098-884-2735" class="big-tel up d3">
+      <span class="lb">お問い合わせ</span>
+      <span class="nu">098-884-2735</span>
+      <span class="hr">FAX 098-884-0099</span>
+    </a>
   </div>
 </section>
 
-<!-- ============ 脚 ============ -->
+<!-- ══ 脚 ══ -->
 <footer class="ft">
   <div class="wrap">
     <div class="ft-top">
-      <div class="ft-brand">
-        <p class="kan">太平山 安國寺</p>
-        <p class="en">Taiheizan Ankokuji ─ Rinzai Zen, Myoshinji School</p>
+      <div class="bd">
+        <b>太平山 安國寺</b>
+        <i>TAIHEIZAN ANKOKUJI — Rinzai Zen, Myōshinji School</i>
         <address>
           〒903-0826　沖縄県那覇市首里寒川町1-2<br>
-          TEL <a href="tel:098-884-2735">098-884-2735</a>　／　FAX 098-884-0099
+          TEL <a href="tel:098-884-2735">098-884-2735</a>　FAX 098-884-0099
         </address>
       </div>
       <div>
         <h5>ご案内</h5>
         <ul>
-          <li><a href="#about">安國寺について</a></li>
+          <li><a href="#intro">ごあいさつ</a></li>
+          <li><a href="#about">安國寺の沿革</a></li>
           <li><a href="#halls">諸堂と御法要</a></li>
           <li><a href="#fees">ご利用料金</a></li>
-          <li><a href="#kuyo">納骨・永代供養</a></li>
         </ul>
       </div>
       <div>
         <h5>そのほか</h5>
         <ul>
+          <li><a href="#kuyo">納骨・永代供養</a></li>
           <li><a href="#reien">霊園「清ら結」</a></li>
           <li><a href="#itonami">お寺のいとなみ</a></li>
           <li><a href="#access">お問い合わせ・アクセス</a></li>
-          <li><a href="#top">ページの先頭へ</a></li>
         </ul>
       </div>
     </div>
-    <div class="ft-btm">
-      <span>&copy; 太平山 安國寺 ─ Taiheizan Ankokuji</span>
+    <div class="ft-bt">
+      <span>&copy; 太平山 安國寺</span>
       <span>那覇市首里・臨済宗妙心寺派</span>
     </div>
   </div>
 </footer>
 
-<a href="#top" class="totop" id="totop" aria-label="ページの先頭へ">▲</a>
+<!-- ══ スマホ常時CTA ══ -->
+<div class="mbar">
+  <a href="tel:098-884-2735" class="pri">お問い合わせ<b>098-884-2735</b></a>
+  <a href="#access">アクセス<b>地図</b></a>
+</div>
 
 <script>
 (function(){
   'use strict';
 
-  /* 円相を閉じる */
-  window.addEventListener('load', function(){
-    setTimeout(function(){ document.getElementById('enso').classList.add('done'); }, 2100);
+  /* 写真が未設置でも下地の色で成立させる */
+  document.querySelectorAll('img').forEach(function(img){
+    var hide = function(){ img.style.display = 'none'; };
+    /* スクリプト実行前にすでに失敗しているものも拾う */
+    if (img.complete && img.naturalWidth === 0) hide();
+    else img.addEventListener('error', hide, { once:true });
   });
 
   /* 静かに立ちあがる */
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
-    });
-  }, { threshold:.12, rootMargin:'0px 0px -8% 0px' });
-  document.querySelectorAll('.rise,.drawline').forEach(function(el){ io.observe(el); });
+  var targets = document.querySelectorAll('.up,.wipe');
+  var reveal = function(el){ el.classList.add('in'); };
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ reveal(e.target); io.unobserve(e.target); } });
+    }, { threshold:.08, rootMargin:'0px 0px -6% 0px' });
+    targets.forEach(function(el){ io.observe(el); });
+  } else {
+    targets.forEach(reveal);   /* 演出なしでも必ず読める */
+  }
 
-  /* ヘッダの地色・上へボタン */
-  var hd = document.getElementById('hd'), totop = document.getElementById('totop');
-  var onScroll = function(){
-    var y = window.scrollY;
-    hd.classList.toggle('solid', y > window.innerHeight * .82);
-    totop.classList.toggle('on', y > window.innerHeight * 1.4);
-  };
+  /* ヘッダの地色 */
+  var hd = document.getElementById('hd');
+  var onScroll = function(){ hd.classList.toggle('on', window.scrollY > window.innerHeight * .78); };
   window.addEventListener('scroll', onScroll, { passive:true });
   onScroll();
 
   /* 引き戸メニュー */
   var burger = document.getElementById('burger'),
       drawer = document.getElementById('drawer'),
-      links  = drawer.querySelectorAll('a');
+      links  = drawer.querySelectorAll('nav a');
   var setMenu = function(open){
-    document.body.classList.toggle('menu-open', open);
+    document.body.classList.toggle('open', open);
     burger.setAttribute('aria-expanded', String(open));
     burger.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
-    links.forEach(function(a, n){ a.style.transitionDelay = open ? (0.18 + n * 0.055) + 's' : '0s'; });
+    links.forEach(function(a,n){ a.style.transitionDelay = open ? (.16 + n*.05) + 's' : '0s'; });
   };
-  burger.addEventListener('click', function(){ setMenu(!document.body.classList.contains('menu-open')); });
-  drawer.querySelectorAll('nav a').forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
+  burger.addEventListener('click', function(){ setMenu(!document.body.classList.contains('open')); });
+  links.forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
   document.addEventListener('keydown', function(e){ if(e.key === 'Escape') setMenu(false); });
 })();
 </script>

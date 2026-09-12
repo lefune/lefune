@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社 鳶寺﨑組｜枠組・くさび式足場の組立・工事</title>
+<meta name="description" content="静岡県駿東郡清水町・株式会社鳶寺﨑組。枠組・くさび式足場の組立工事を中心に、低層から高層まで安全第一で施工。静岡県・神奈川県・東京都・千葉県・埼玉県対応。無料見積り 055-976-0430">
+<meta name="theme-color" content="#0a2a4d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+/* ══════════════════════════════════════════════════════
+   株式会社 鳶寺﨑組 ― 安全第一主義
+   配色は実際の足場材（安全オレンジ）と同社ロゴの紺を土台に。
+   斜めの区切りと帯は、足場の斜材・警戒色のリズムから。
+   ══════════════════════════════════════════════════════ */
+:root{
+  --ink:      #11181f;
+  --steel:    #3c4a58;
+  --steel-2:  #6b7784;
+  --blue:     #0a52a3;
+  --blue-deep:#082e57;
+  --blue-ink: #071f3c;
+  --orange:   #e8610f;
+  --orange-2: #ff7a24;
+  --paper:    #f3f1ea;
+  --paper-2:  #e9e4d8;
+  --line:     rgba(17,24,31,.14);
+  --line-2:   rgba(255,255,255,.18);
+  --ease:     cubic-bezier(.16,1,.3,1);
+  --disp:     'Oswald','Arial Narrow',sans-serif;
+  --jp:       'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif;
+  --pad:      clamp(20px,4.6vw,72px);
+}
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0 }
+html{ scroll-behavior:smooth; -webkit-text-size-adjust:100% }
+body{
+  font-family:var(--jp); font-size:16px; line-height:1.9; color:var(--ink);
+  background:var(--paper); overflow-x:hidden; -webkit-font-smoothing:antialiased;
+  padding-bottom:64px; /* mobile CTA bar */
+}
+img{ display:block; max-width:100%; height:auto }
+a{ color:inherit; text-decoration:none }
+::selection{ background:var(--orange); color:#fff }
+:focus-visible{ outline:2px solid var(--orange); outline-offset:3px }
+h1,h2,h3,h4{ font-weight:900; line-height:1.35 }
+
+.wrap{ width:min(1160px,100%); margin-inline:auto; padding-inline:var(--pad) }
+.pad{ padding-block:clamp(60px,8vw,116px) }
+.col{ width:min(680px,100%) }
+
+.eyebrow{ display:flex; align-items:center; gap:10px; margin-bottom:16px }
+.eyebrow .ln{ width:34px; height:3px; background:var(--orange) }
+.eyebrow span{ font-family:var(--disp); font-weight:600; font-size:13px; letter-spacing:.22em; color:var(--blue); text-transform:uppercase }
+
+.ttl{ font-size:clamp(26px,3.6vw,38px); margin-bottom:.6em; text-wrap:balance }
+.ttl .sub{ display:block; margin-top:10px; font-family:var(--disp); font-weight:500; font-size:14px; letter-spacing:.14em; color:var(--steel-2); text-transform:uppercase }
+.lead{ font-size:16px; line-height:2; color:var(--steel) }
+.lead strong{ color:var(--ink); font-weight:700 }
+
+/* ── header ── */
+.hd{
+  position:fixed; top:0; left:0; right:0; z-index:1100; height:64px;
+  display:flex; align-items:center; justify-content:space-between;
+  padding-inline:var(--pad); background:var(--blue-ink); color:#fff;
+  transition:box-shadow .4s;
+}
+.hd.on{ box-shadow:0 2px 18px rgba(0,0,0,.25) }
+.hd .logo{ display:flex; align-items:center; gap:10px; font-weight:900; font-size:16px; letter-spacing:.02em; white-space:nowrap }
+.hd .logo .mk{ width:30px; height:30px; border:2px solid var(--orange); border-radius:50%; display:grid; place-items:center; font-size:13px; color:var(--orange); font-weight:900 }
+.hd nav{ display:flex; align-items:center; gap:clamp(10px,1.6vw,26px) }
+.hd nav a{ font-size:14px; font-weight:500; letter-spacing:.02em; white-space:nowrap }
+.hd nav a:hover{ color:var(--orange-2) }
+.hd .tel{ display:inline-flex; align-items:center; gap:8px; background:var(--orange); color:#fff; padding:9px 16px; font-weight:700; font-size:14.5px; white-space:nowrap }
+.hd .tel:hover{ background:var(--orange-2) }
+.burger{ display:none; width:40px; height:40px; border:0; background:none; position:relative; cursor:pointer }
+.burger span{ position:absolute; left:9px; width:22px; height:2px; background:#fff }
+.burger span:nth-child(1){ top:22px } .burger span:nth-child(2){ top:29px } .burger span:nth-child(3){ top:36px }
+
+@media (max-width:900px){
+  .hd nav.pc{ display:none } .burger{ display:block }
+}
+.drawer{
+  position:fixed; inset:64px 0 0 0; z-index:1090; background:var(--blue-ink);
+  transform:translateX(100%); transition:transform .5s var(--ease);
+  padding:32px var(--pad); overflow-y:auto;
+}
+body.open .drawer{ transform:translateX(0) }
+body.open .mbar{ display:none }
+body.open{ overflow:hidden }
+.drawer a{ display:block; padding:16px 0; border-bottom:1px solid var(--line-2); color:#fff; font-size:17px; font-weight:700 }
+.drawer .tel-big{ margin-top:26px; display:block; background:var(--orange); color:#fff; text-align:center; padding:16px; font-weight:900; font-size:20px }
+
+/* ── hero ── */
+.hero{ position:relative; min-height:min(92svh,860px); display:flex; align-items:flex-end; background:#1a2733; overflow:hidden }
+.hero img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 30% }
+.hero::after{ content:''; position:absolute; inset:0; background:linear-gradient(0deg,rgba(7,15,24,.92) 0%,rgba(7,15,24,.35) 46%,rgba(7,15,24,.15) 100%) }
+.hero-in{ position:relative; z-index:2; width:100%; padding:0 var(--pad) clamp(48px,8vh,88px) }
+.hero .kicker{ font-family:var(--disp); font-weight:600; font-size:14px; letter-spacing:.3em; color:var(--orange-2); text-transform:uppercase; margin-bottom:18px }
+.hero h1{ color:#fff; font-size:clamp(34px,6vw,64px); line-height:1.22; text-wrap:balance; text-shadow:0 3px 24px rgba(0,0,0,.4) }
+.hero h1 em{ font-style:normal; color:var(--orange-2) }
+.hero p{ margin-top:20px; color:rgba(255,255,255,.86); font-size:16.5px; max-width:560px; line-height:1.9 }
+.hero-cta{ margin-top:32px; display:flex; gap:14px; flex-wrap:wrap }
+.btn{ display:inline-flex; align-items:center; gap:10px; padding:15px 26px; font-weight:700; font-size:15px; transition:transform .3s var(--ease), background .3s }
+.btn.pri{ background:var(--orange); color:#fff }
+.btn.pri:hover{ background:var(--orange-2); transform:translateY(-2px) }
+.btn.ghost{ border:1.5px solid rgba(255,255,255,.6); color:#fff }
+.btn.ghost:hover{ background:rgba(255,255,255,.12) }
+
+/* diagonal safety-stripe divider */
+.stripe{ height:14px; background:repeating-linear-gradient(-45deg, var(--orange) 0 22px, var(--ink) 22px 44px); }
+
+/* ── mission ── */
+.mission{ background:var(--paper) }
+.mission .grid{ display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(30px,4.4vw,64px); align-items:center }
+.mission figure{ position:relative; aspect-ratio:4/3; overflow:hidden; clip-path:polygon(0 0,100% 0,100% 92%,0% 100%) }
+.mission figure img{ width:100%; height:100%; object-fit:cover }
+.mission .stats{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; margin-top:36px; background:var(--line) }
+.mission .stat{ background:var(--paper); padding:20px 14px }
+.mission .stat b{ display:block; font-family:var(--disp); font-size:clamp(26px,3vw,34px); color:var(--blue); font-weight:700 }
+.mission .stat span{ font-size:12.5px; color:var(--steel-2); letter-spacing:.02em }
+
+/* ── works ── */
+.works{ background:var(--blue-ink); color:#fff }
+.works .eyebrow span{ color:var(--orange-2) }
+.works .lead{ color:rgba(255,255,255,.82) }
+.works-grid{ display:grid; grid-template-columns:1.3fr .8fr; gap:14px; margin-top:clamp(30px,4vw,50px) }
+.works-grid figure{ position:relative; overflow:hidden; background:#223 }
+.works-grid img{ width:100%; height:100%; object-fit:cover; transition:transform .8s var(--ease) }
+.works-grid a:hover img{ transform:scale(1.05) }
+.works-grid .cap{ position:absolute; left:0; bottom:0; right:0; padding:16px 18px; font-size:13.5px; font-weight:700;
+  background:linear-gradient(0deg,rgba(0,0,0,.72),transparent); color:#fff }
+.wg-a{ grid-row:1/3 }
+@media (max-width:760px){ .works-grid{ grid-template-columns:1fr } .wg-a{ grid-row:auto } }
+
+/* ── news / career split ── */
+.split{ background:var(--paper-2) }
+.split .cols{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(30px,4vw,64px) }
+.news-list{ margin-top:22px; border-top:1px solid var(--line) }
+.news-list .row{ display:flex; gap:18px; padding:16px 0; border-bottom:1px solid var(--line); align-items:baseline }
+.news-list .dt{ font-family:var(--disp); font-size:14px; color:var(--blue); white-space:nowrap; font-weight:500 }
+.news-list .tx{ font-size:14.5px; color:var(--steel) }
+.split .btnrow{ margin-top:22px }
+.btn.outline{ border:1.5px solid var(--ink); color:var(--ink); padding:13px 22px; font-size:14px }
+.btn.outline:hover{ background:var(--ink); color:#fff }
+
+.career-fig{ position:relative; aspect-ratio:3/4; overflow:hidden; margin-top:22px; max-width:320px }
+.career-fig img{ width:100%; height:100%; object-fit:cover }
+.career-fig figcaption{ position:absolute; left:0; right:0; bottom:0; padding:14px 16px; font-size:12.5px; color:#fff;
+  background:linear-gradient(0deg,rgba(0,0,0,.7),transparent) }
+
+/* ── recruit ── */
+.recruit{ position:relative; background:var(--ink); color:#fff; overflow:hidden }
+.recruit img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.28 }
+.recruit .inner{ position:relative; z-index:2; text-align:center }
+.recruit .eyebrow{ justify-content:center }
+.recruit p{ color:rgba(255,255,255,.85); max-width:560px; margin-inline:auto; line-height:2 }
+
+/* ── exits: 仮設材リース / Flap ── */
+.exits{ background:var(--paper) }
+.exit-grid{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(20px,3vw,32px) }
+.exit-card{ position:relative; display:block; overflow:hidden; min-height:320px; color:#fff; }
+.exit-card img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .8s var(--ease) }
+.exit-card:hover img{ transform:scale(1.06) }
+.exit-card::after{ content:''; position:absolute; inset:0; background:linear-gradient(180deg,rgba(10,15,20,.30) 0%,rgba(10,15,20,.86) 100%) }
+.exit-card .ec-in{ position:relative; z-index:2; height:100%; display:flex; flex-direction:column; justify-content:flex-end; padding:clamp(24px,3vw,36px) }
+.exit-card .tag{ font-family:var(--disp); font-size:12.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--orange-2); margin-bottom:10px; font-weight:600 }
+.exit-card h3{ font-size:clamp(20px,2.4vw,26px); margin-bottom:8px }
+.exit-card p{ font-size:14px; color:rgba(255,255,255,.85); line-height:1.8; max-width:38ch }
+.exit-card .go{ margin-top:16px; display:inline-flex; align-items:center; gap:8px; font-weight:700; font-size:14px; color:#fff }
+.exit-card .go svg{ width:16px; height:16px }
+
+/* ── contact ── */
+.contact{ background:var(--orange); color:#fff; text-align:center }
+.contact h2{ font-size:clamp(24px,3.2vw,32px) }
+.contact .tel{ display:inline-flex; align-items:baseline; gap:12px; margin-top:22px; font-family:var(--disp) }
+.contact .tel a{ font-size:clamp(30px,5vw,46px); font-weight:700; color:#fff }
+.contact .hours{ margin-top:10px; font-size:14px; color:rgba(255,255,255,.9) }
+.contact .btn.ghost2{ margin-top:24px; border:1.5px solid #fff; color:#fff; display:inline-flex; padding:14px 28px; font-weight:700 }
+.contact .btn.ghost2:hover{ background:#fff; color:var(--orange) }
+
+/* ── footer ── */
+.ft{ background:var(--blue-ink); color:rgba(255,255,255,.72); padding-block:56px 26px }
+.ft-top{ display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:36px; padding-bottom:36px; border-bottom:1px solid var(--line-2) }
+.ft .brand{ display:flex; align-items:center; gap:10px; color:#fff; font-weight:900; font-size:18px; margin-bottom:14px }
+.ft .brand .mk{ width:28px; height:28px; border:2px solid var(--orange); border-radius:50%; display:grid; place-items:center; font-size:12px; color:var(--orange); font-weight:900 }
+.ft address{ font-style:normal; font-size:13.5px; line-height:2 }
+.ft h5{ font-size:12.5px; letter-spacing:.16em; color:var(--orange-2); margin-bottom:14px; font-weight:700 }
+.ft .office{ margin-bottom:18px }
+.ft .office b{ display:block; color:#fff; font-size:13px; margin-bottom:4px }
+.ft-bt{ padding-top:22px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-size:12px; color:rgba(255,255,255,.42) }
+
+.mbar{ position:fixed; left:0; right:0; bottom:0; z-index:1150; display:none;
+  background:var(--ink); padding:8px 8px calc(8px + env(safe-area-inset-bottom)); gap:8px }
+.mbar a{ flex:1; text-align:center; padding:10px 6px; font-size:13px; font-weight:700; color:#fff }
+.mbar a.pri{ background:var(--orange) }
+.mbar a.sec{ border:1px solid rgba(255,255,255,.4) }
+
+.up{ opacity:0; transform:translateY(20px); transition:opacity 1s var(--ease), transform 1s var(--ease) }
+.up.in{ opacity:1; transform:none }
+.up.d1{ transition-delay:.1s } .up.d2{ transition-delay:.2s }
+
+@media (max-width:900px){
+  .mission .grid,.split .cols{ grid-template-columns:1fr }
+  .exit-grid{ grid-template-columns:1fr }
+  .mission .stats{ grid-template-columns:1fr }
+}
+@media (max-width:640px){
+  body{ padding-bottom:60px }
+  .mbar{ display:flex }
+  .hero{ min-height:88svh }
+}
+@media (prefers-reduced-motion:reduce){
+  *{ animation-duration:.01ms!important; transition-duration:.01ms!important }
+  .up{ opacity:1; transform:none }
+}
+</style>
+</head>
+<body>
+
+<header class="hd" id="hd">
+  <a href="#top" class="logo"><span class="mk">鳶</span>株式会社 鳶寺﨑組</a>
+  <nav class="pc" aria-label="メインメニュー">
+    <a href="#mission">安全への取組み</a>
+    <a href="#works">施工実績</a>
+    <a href="#news">お知らせ</a>
+    <a href="#recruit">採用情報</a>
+    <a href="terasaki-zairyo.html">仮設材リース</a>
+    <a href="flap-index.html">防災商品</a>
+    <a href="tel:055-976-0430" class="tel">055-976-0430</a>
+  </nav>
+  <button class="burger" id="burger" aria-label="メニュー" aria-expanded="false"><span></span><span></span><span></span></button>
+</header>
+
+<div class="drawer" id="drawer">
+  <a href="#mission">安全への取組み</a>
+  <a href="#works">施工実績</a>
+  <a href="#news">お知らせ</a>
+  <a href="#recruit">採用情報</a>
+  <a href="terasaki-zairyo.html">仮設材リース</a>
+  <a href="flap-index.html">関連会社 Flap（防災商品）</a>
+  <a href="tel:055-976-0430" class="tel-big">055-976-0430</a>
+</div>
+
+<section class="hero" id="top">
+  <img src="images/terasaki/hero_tower.jpg" alt="足場で覆われた高層建築物">
+  <div class="hero-in">
+    <p class="kicker">Safety First — 安全第一主義</p>
+    <h1>現場の安全を、<br><em>鳶寺﨑組</em>がお守りします。</h1>
+    <p>枠組・くさび式足場の組立・工事なら株式会社鳶寺﨑組にお任せください。低層から高層まで、様々な現場に合わせた安心・安全な足場工事を施工しています。</p>
+    <div class="hero-cta">
+      <a href="tel:055-976-0430" class="btn pri">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        055-976-0430 に電話する
+      </a>
+      <a href="#works" class="btn ghost">施工実績を見る</a>
+    </div>
+  </div>
+</section>
+
+<div class="stripe" role="presentation"></div>
+
+<section class="mission pad" id="mission">
+  <div class="wrap grid">
+    <figure class="up">
+      <img src="images/terasaki/building_blue.jpg" alt="ブルーシートで養生された建設現場">
+    </figure>
+    <div>
+      <div class="eyebrow up"><span class="ln"></span><span>Mission</span></div>
+      <h2 class="ttl up d1">安心・安全な<br>足場づくり<span class="sub">Anzen &amp; Anshin</span></h2>
+      <p class="lead up d2">
+        足場工事は、建設現場で働くすべての人の安全を足もとから支える仕事です。
+        私たち鳶寺﨑組は「安全第一主義」を掲げ、<strong>低層の戸建てから高層のマンション・工場まで</strong>、
+        現場の規模や条件にあわせた枠組・くさび式足場の組立・工事を行っています。
+      </p>
+      <p class="lead up d2" style="margin-top:1.2em">
+        おかげさまで、様々な建設会社様より足場工事のご依頼をいただいております。
+        まずはお気軽にご相談ください。
+      </p>
+      <div class="stats up">
+        <div class="stat"><b>戸建〜高層</b><span>低層から高層まで対応</span></div>
+        <div class="stat"><b>5</b><span>施工エリア（都県）</span></div>
+        <div class="stat"><b>2</b><span>拠点（本社・横浜営業所）</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="works pad" id="works">
+  <div class="wrap">
+    <div class="eyebrow up"><span class="ln"></span><span>Our Works</span></div>
+    <h2 class="ttl up d1">施工実績<span class="sub">Construction Works</span></h2>
+    <p class="lead up d2">低層から高層まで、住宅・マンション・工場・公共施設まで幅広く対応しています。</p>
+    <div class="works-grid">
+      <a href="#" class="wg-a up d1" onclick="return false">
+        <figure><img src="images/terasaki/hero_tower.jpg" alt="高層建築物の足場工事"><figcaption class="cap">高層マンション ／ 枠組足場</figcaption></figure>
+      </a>
+      <a href="#" class="up d2" onclick="return false">
+        <figure><img src="images/terasaki/building_blue.jpg" alt="大型施設の足場工事"><figcaption class="cap">大型施設 ／ 養生足場</figcaption></figure>
+      </a>
+      <a href="#" class="up d2" onclick="return false">
+        <figure><img src="images/terasaki/building_apartment.jpg" alt="集合住宅の足場工事"><figcaption class="cap">集合住宅 ／ くさび式足場</figcaption></figure>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="split pad" id="news">
+  <div class="wrap cols">
+    <div>
+      <div class="eyebrow up"><span class="ln"></span><span>News</span></div>
+      <h2 class="ttl up d1">お知らせ</h2>
+      <div class="news-list up d2">
+        <div class="row"><span class="dt">2025.04.17</span><span class="tx">工事経歴の更新をしました。</span></div>
+        <div class="row"><span class="dt">2024.07.25</span><span class="tx">工事経歴の更新をしました。</span></div>
+        <div class="row"><span class="dt">2023.06.20</span><span class="tx">工事経歴を更新しました。</span></div>
+        <div class="row"><span class="dt">2020.11.13</span><span class="tx">お知らせコーナーを設けました。</span></div>
+      </div>
+    </div>
+    <div id="recruit-anchor">
+      <div class="eyebrow up"><span class="ln"></span><span>Career</span></div>
+      <h2 class="ttl up d1">工事経歴</h2>
+      <p class="lead up d2">おかげ様で様々な建設会社様に足場工事のご依頼を頂きました。</p>
+      <figure class="career-fig up d2">
+        <img src="images/terasaki/career_fuji.jpg" alt="富士山を背景に現場で笑顔の作業員2名">
+        <figcaption>富士山を望む現場にて</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="recruit pad" id="recruit">
+  <img src="images/terasaki/building_apartment.jpg" alt="">
+  <div class="wrap inner">
+    <div class="eyebrow up"><span class="ln"></span><span>Recruit</span></div>
+    <h2 class="ttl up d1">採用情報</h2>
+    <p class="up d2">
+      足場工事は建設現場になくてはならないものです。これからますます繁栄していく業界です。<br>
+      未経験でも大歓迎！私たちが丁寧に教えます。
+    </p>
+    <div class="up d2" style="margin-top:26px">
+      <a href="tel:055-976-0430" class="btn pri">採用について電話で問い合わせる</a>
+    </div>
+  </div>
+</section>
+
+<section class="exits pad">
+  <div class="wrap">
+    <div class="eyebrow up"><span class="ln"></span><span>More</span></div>
+    <h2 class="ttl up d1">仮設材リース／関連会社のご案内</h2>
+    <div class="exit-grid">
+      <a class="exit-card up d1" href="terasaki-zairyo.html">
+        <img src="images/terasaki/material_05.jpg" alt="仮設材リースの在庫写真">
+        <div class="ec-in">
+          <span class="tag">Temporary Material</span>
+          <h3>仮設材リース</h3>
+          <p>各種仮設足場工事のほか、仮設材リースも行っております。建設会社様は、まず在庫の様子をご覧ください。</p>
+          <span class="go">写真で見る&nbsp;<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+      <a class="exit-card up d2" href="flap-index.html">
+        <img src="images/flap/bosaisouko.jpg" alt="関連会社Flapの防災商品">
+        <div class="ec-in">
+          <span class="tag">Related Company</span>
+          <h3>関連会社 株式会社Flap</h3>
+          <p>防災グッズ・防災用品の販売ページ。もしもの時のための備えを取り揃えています。</p>
+          <span class="go">商品を見る&nbsp;<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap pad">
+    <h2>お問い合わせ・無料見積り依頼</h2>
+    <div class="tel"><a href="tel:055-976-0430">055-976-0430</a></div>
+    <p class="hours">受付時間／8:00〜17:00（日曜は除く）</p>
+    <a href="mailto:" class="btn ghost2">メールでお問い合わせ</a>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-top">
+      <div>
+        <div class="brand"><span class="mk">鳶</span>株式会社 鳶寺﨑組</div>
+        <address>枠組・クサビ式足場の組立・工事<br>施工エリア：静岡県・神奈川県・東京都・千葉県・埼玉県</address>
+      </div>
+      <div>
+        <h5>本社</h5>
+        <div class="office">
+          <address>〒411-0904<br>静岡県駿東郡清水町柿田724<br>TEL 055-976-0430　FAX 055-976-5383</address>
+        </div>
+        <h5>横浜営業所</h5>
+        <div class="office">
+          <address>〒231-0023<br>神奈川県横浜市中区山下町255-1<br>リリファ横濱山下町203<br>TEL 045-225-8922　FAX 045-225-8923</address>
+        </div>
+      </div>
+      <div>
+        <h5>関連リンク</h5>
+        <address style="line-height:2.4">
+          <a href="terasaki-zairyo.html">仮設材リース</a><br>
+          <a href="flap-index.html">関連会社 株式会社Flap（防災商品）</a>
+        </address>
+      </div>
+    </div>
+    <div class="ft-bt">
+      <span>&copy; 2018 TOBI TERASAKI-GUMI Co.,Ltd.</span>
+      <span>Safety First — 安全第一主義</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a href="tel:055-976-0430" class="pri">電話で相談</a>
+  <a href="terasaki-zairyo.html" class="sec">仮設材リース</a>
+</div>
+
+<script>
+(function(){
+  'use strict';
+  document.querySelectorAll('img').forEach(function(img){
+    var hide=function(){img.style.display='none'};
+    if(img.complete && img.naturalWidth===0) hide();
+    else img.addEventListener('error',hide,{once:true});
+  });
+  var targets=document.querySelectorAll('.up');
+  var reveal=function(el){el.classList.add('in')};
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){reveal(e.target); io.unobserve(e.target);} });
+    },{threshold:.1, rootMargin:'0px 0px -6% 0px'});
+    targets.forEach(function(el){io.observe(el)});
+  } else { targets.forEach(reveal); }
+
+  var hd=document.getElementById('hd');
+  window.addEventListener('scroll',function(){ hd.classList.toggle('on', window.scrollY>10) },{passive:true});
+
+  var burger=document.getElementById('burger'), drawer=document.getElementById('drawer');
+  var setMenu=function(open){
+    document.body.classList.toggle('open',open);
+    burger.setAttribute('aria-expanded',String(open));
+  };
+  burger.addEventListener('click',function(){ setMenu(!document.body.classList.contains('open')) });
+  drawer.querySelectorAll('a').forEach(function(a){ a.addEventListener('click',function(){ setMenu(false) }) });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') setMenu(false) });
+})();
+</script>
+</body>
+</html>

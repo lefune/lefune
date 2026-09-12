@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>仮設材リース｜株式会社 鳶寺﨑組</title>
+<meta name="description" content="株式会社鳶寺﨑組の仮設材リースのご案内。単管パイプ・くさび式足場材・布板・金具など、在庫写真をカテゴリ別にご覧いただけます。建設会社各社様へ、お気軽にお問い合わせください。">
+<meta name="theme-color" content="#0a2a4d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:      #11181f;
+  --steel:    #3c4a58;
+  --steel-2:  #6b7784;
+  --blue:     #0a52a3;
+  --blue-deep:#082e57;
+  --blue-ink: #071f3c;
+  --orange:   #e8610f;
+  --orange-2: #ff7a24;
+  --paper:    #f3f1ea;
+  --paper-2:  #e9e4d8;
+  --line:     rgba(17,24,31,.14);
+  --line-2:   rgba(255,255,255,.18);
+  --ease:     cubic-bezier(.16,1,.3,1);
+  --disp:     'Oswald','Arial Narrow',sans-serif;
+  --jp:       'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif;
+  --pad:      clamp(20px,4.6vw,72px);
+}
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0 }
+html{ scroll-behavior:smooth; -webkit-text-size-adjust:100% }
+body{ font-family:var(--jp); font-size:16px; line-height:1.9; color:var(--ink); background:var(--paper); overflow-x:hidden; -webkit-font-smoothing:antialiased }
+img{ display:block; max-width:100%; height:auto }
+a{ color:inherit; text-decoration:none }
+::selection{ background:var(--orange); color:#fff }
+:focus-visible{ outline:2px solid var(--orange); outline-offset:3px }
+h1,h2,h3{ font-weight:900; line-height:1.35 }
+button{ font:inherit; cursor:pointer; background:none; border:0; color:inherit }
+
+.wrap{ width:min(1160px,100%); margin-inline:auto; padding-inline:var(--pad) }
+.pad{ padding-block:clamp(48px,7vw,90px) }
+
+/* header (shared) */
+.hd{ position:sticky; top:0; z-index:1100; height:64px; display:flex; align-items:center; justify-content:space-between;
+  padding-inline:var(--pad); background:var(--blue-ink); color:#fff }
+.hd .logo{ display:flex; align-items:center; gap:10px; font-weight:900; font-size:15px; white-space:nowrap }
+.hd .logo .mk{ width:28px; height:28px; border:2px solid var(--orange); border-radius:50%; display:grid; place-items:center; font-size:12px; color:var(--orange); font-weight:900 }
+.hd .back{ font-size:13.5px; color:rgba(255,255,255,.8); display:flex; align-items:center; gap:6px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis }
+.hd .tel{ background:var(--orange); color:#fff; padding:9px 16px; font-weight:700; font-size:14px; white-space:nowrap; flex:0 0 auto }
+@media (max-width:560px){
+  .hd{ gap:8px; padding-inline:16px }
+  .hd .logo .lt{ display:none }
+  .hd .back{ display:none }
+}
+
+/* page hero */
+.phero{ position:relative; background:var(--blue-ink); color:#fff; overflow:hidden }
+.phero img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.32 }
+.phero::after{ content:''; position:absolute; inset:0; background:linear-gradient(100deg,rgba(7,15,24,.94) 0%,rgba(7,15,24,.6) 70%) }
+.phero .inner{ position:relative; z-index:2 }
+.phero .kicker{ font-family:var(--disp); font-size:13px; letter-spacing:.28em; color:var(--orange-2); text-transform:uppercase; margin-bottom:14px }
+.phero h1{ font-size:clamp(28px,4.4vw,44px) }
+.phero p{ margin-top:16px; max-width:640px; color:rgba(255,255,255,.85); line-height:2 }
+.phero .quick{ margin-top:26px; display:flex; gap:12px; flex-wrap:wrap }
+.qbtn{ border:1.5px solid rgba(255,255,255,.55); color:#fff; padding:10px 18px; font-size:13.5px; font-weight:600 }
+.qbtn:hover{ background:rgba(255,255,255,.12) }
+
+/* filter chips */
+.filters{ position:sticky; top:64px; z-index:90; background:var(--paper); border-bottom:1px solid var(--line);
+  padding:14px var(--pad); display:flex; gap:8px; overflow-x:auto; -webkit-overflow-scrolling:touch }
+.filters::-webkit-scrollbar{ display:none }
+.chip{ flex:0 0 auto; padding:9px 16px; border:1.5px solid var(--line); font-size:13.5px; font-weight:700; color:var(--steel);
+  border-radius:999px; white-space:nowrap; transition:background .25s,color .25s,border-color .25s }
+.chip.active{ background:var(--ink); border-color:var(--ink); color:#fff }
+.chip .n{ opacity:.6; font-weight:500; margin-left:4px }
+
+/* gallery grid */
+.gallery{ background:var(--paper) }
+.ggrid{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.6vw,18px) }
+.gitem{ position:relative; overflow:hidden; aspect-ratio:4/3; background:#ccc; cursor:zoom-in }
+.gitem img{ width:100%; height:100%; object-fit:cover; transition:transform .6s var(--ease) }
+.gitem:hover img{ transform:scale(1.08) }
+.gitem .tag{ position:absolute; left:10px; bottom:10px; background:rgba(7,15,24,.72); color:#fff; font-size:12px; font-weight:700;
+  padding:5px 10px; letter-spacing:.02em }
+.gitem.hide{ display:none }
+@media (max-width:860px){ .ggrid{ grid-template-columns:repeat(2,1fr) } }
+@media (max-width:480px){ .ggrid{ grid-template-columns:1fr 1fr; gap:8px } }
+
+/* lightbox */
+.lb{ position:fixed; inset:0; z-index:1300; background:rgba(6,10,15,.94); display:none; align-items:center; justify-content:center; padding:5vh 4vw }
+.lb.open{ display:flex }
+.lb img{ max-width:100%; max-height:88vh; object-fit:contain; box-shadow:0 20px 60px rgba(0,0,0,.5) }
+.lb .close{ position:absolute; top:18px; right:20px; color:#fff; font-size:32px; line-height:1; width:44px; height:44px }
+.lb .nav{ position:absolute; top:50%; transform:translateY(-50%); color:#fff; font-size:38px; width:56px; height:56px;
+  display:grid; place-items:center; background:rgba(255,255,255,.08); border-radius:50% }
+.lb .nav:hover{ background:rgba(255,255,255,.2) }
+.lb .prev{ left:14px } .lb .next{ right:14px }
+.lb .cnt{ position:absolute; bottom:18px; left:0; right:0; text-align:center; color:rgba(255,255,255,.7); font-size:13px; letter-spacing:.05em }
+
+/* CTA band */
+.cta-band{ background:var(--orange); color:#fff; text-align:center }
+.cta-band h2{ font-size:clamp(22px,3vw,28px) }
+.cta-band .tel{ margin-top:18px; font-family:var(--disp); font-size:clamp(26px,4vw,36px); font-weight:700 }
+.cta-band p{ margin-top:10px; font-size:14px; color:rgba(255,255,255,.9) }
+
+.ft{ background:var(--blue-ink); color:rgba(255,255,255,.68); padding-block:40px 22px; text-align:center; font-size:13px }
+.ft a{ color:var(--orange-2); font-weight:700 }
+
+.up{ opacity:0; transform:translateY(16px); transition:opacity .8s var(--ease), transform .8s var(--ease) }
+.up.in{ opacity:1; transform:none }
+@media (prefers-reduced-motion:reduce){ .up{opacity:1;transform:none} }
+</style>
+</head>
+<body>
+
+<header class="hd">
+  <a href="terasaki-index.html" class="logo"><span class="mk">鳶</span><span class="lt">株式会社 鳶寺﨑組</span></a>
+  <a href="terasaki-index.html" class="back">← トップページへ戻る</a>
+  <a href="tel:055-976-0430" class="tel">055-976-0430</a>
+</header>
+
+<section class="phero">
+  <img src="images/terasaki/material_13.jpg" alt="仮設材の保管ヤード全景">
+  <div class="wrap pad inner">
+    <p class="kicker">Temporary Material</p>
+    <h1>仮設材リース</h1>
+    <p>各種仮設足場工事のほか、仮設材リースも行っております。建設会社各社様へ―在庫の一部を写真でご紹介します。ご不明な点やご質問等、お気軽にお問い合わせください。</p>
+    <div class="quick">
+      <a href="tel:055-976-0430" class="qbtn">📞 055-976-0430</a>
+      <a href="#gallery" class="qbtn">在庫写真を見る ↓</a>
+    </div>
+  </div>
+</section>
+
+<nav class="filters" id="filters" aria-label="カテゴリで絞り込み">
+  <button class="chip active" data-f="all">すべて <span class="n">15</span></button>
+  <button class="chip" data-f="tankan">単管パイプ <span class="n">2</span></button>
+  <button class="chip" data-f="kusabi">くさび式足場材 <span class="n">5</span></button>
+  <button class="chip" data-f="nunoita">布板・足場板 <span class="n">2</span></button>
+  <button class="chip" data-f="kanagu">金具・付属品 <span class="n">3</span></button>
+  <button class="chip" data-f="kaku">角パイプ・支柱 <span class="n">1</span></button>
+  <button class="chip" data-f="yard">保管ヤード</button>
+  <button class="chip" data-f="youjou">養生資材</button>
+</nav>
+
+<section class="gallery pad" id="gallery">
+  <div class="wrap">
+    <div class="ggrid" id="ggrid">
+      <!-- 01 -->
+      <a class="gitem up" data-cat="tankan" href="#" data-idx="0"><img src="images/terasaki/material_01.jpg" alt="単管パイプの束（オレンジ・亜鉛メッキ）" loading="lazy"><span class="tag">単管パイプ</span></a>
+      <!-- 02 -->
+      <a class="gitem up" data-cat="kanagu" href="#" data-idx="1"><img src="images/terasaki/material_02.jpg" alt="足場金具・ジャッキベース類" loading="lazy"><span class="tag">金具・付属品</span></a>
+      <!-- 03 -->
+      <a class="gitem up" data-cat="nunoita" href="#" data-idx="2"><img src="images/terasaki/material_03.jpg" alt="敷板を積み重ねた在庫" loading="lazy"><span class="tag">布板・足場板</span></a>
+      <!-- 04 -->
+      <a class="gitem up" data-cat="kusabi" href="#" data-idx="3"><img src="images/terasaki/material_04.jpg" alt="くさび式布板と単管の在庫" loading="lazy"><span class="tag">くさび式足場材</span></a>
+      <!-- 05 -->
+      <a class="gitem up" data-cat="kusabi" href="#" data-idx="4"><img src="images/terasaki/material_05.jpg" alt="くさび式建地材の在庫" loading="lazy"><span class="tag">くさび式足場材</span></a>
+      <!-- 06 -->
+      <a class="gitem up" data-cat="nunoita" href="#" data-idx="5"><img src="images/terasaki/material_06.jpg" alt="ラックに積まれた布板" loading="lazy"><span class="tag">布板・足場板</span></a>
+      <!-- 07 -->
+      <a class="gitem up" data-cat="kanagu" href="#" data-idx="6"><img src="images/terasaki/material_07.jpg" alt="番線かご台車に収めた金具類" loading="lazy"><span class="tag">金具・付属品</span></a>
+      <!-- 08 -->
+      <a class="gitem up" data-cat="kaku" href="#" data-idx="7"><img src="images/terasaki/material_08.jpg" alt="角パイプ支柱の束" loading="lazy"><span class="tag">角パイプ・支柱</span></a>
+      <!-- 09 -->
+      <a class="gitem up" data-cat="kusabi" href="#" data-idx="8"><img src="images/terasaki/material_09.jpg" alt="くさび式部材の積み層" loading="lazy"><span class="tag">くさび式足場材</span></a>
+      <!-- 10 -->
+      <a class="gitem up" data-cat="tankan" href="#" data-idx="9"><img src="images/terasaki/material_10.jpg" alt="ロープで束ねた単管パイプ" loading="lazy"><span class="tag">単管パイプ</span></a>
+      <!-- 11 -->
+      <a class="gitem up" data-cat="kanagu" href="#" data-idx="10"><img src="images/terasaki/material_11.jpg" alt="かご台車内の金具クローズアップ" loading="lazy"><span class="tag">金具・付属品</span></a>
+      <!-- 12 -->
+      <a class="gitem up" data-cat="kusabi" href="#" data-idx="11"><img src="images/terasaki/material_12.jpg" alt="くさび式部材の斜め積み" loading="lazy"><span class="tag">くさび式足場材</span></a>
+      <!-- 13 -->
+      <a class="gitem up" data-cat="yard" href="#" data-idx="12"><img src="images/terasaki/material_13.jpg" alt="仮設材保管ヤードの全景" loading="lazy"><span class="tag">保管ヤード</span></a>
+      <!-- 14 -->
+      <a class="gitem up" data-cat="kusabi" href="#" data-idx="13"><img src="images/terasaki/material_14.jpg" alt="鉄塔を背景にしたくさび式部材" loading="lazy"><span class="tag">くさび式足場材</span></a>
+      <!-- 15 -->
+      <a class="gitem up" data-cat="youjou" href="#" data-idx="14"><img src="images/terasaki/material_15.jpg" alt="養生シート・資材袋の収納" loading="lazy"><span class="tag">養生資材</span></a>
+    </div>
+    <p style="margin-top:24px; font-size:13px; color:var(--steel-2)">
+      ※ カテゴリ名は写真から見た目安の分類です。品目の詳細・在庫状況はお電話にてご確認ください。
+    </p>
+  </div>
+</section>
+
+<section class="cta-band pad">
+  <div class="wrap">
+    <h2>建設会社各社様へ ― お気軽にお問い合わせください</h2>
+    <div class="tel"><a href="tel:055-976-0430">055-976-0430</a></div>
+    <p>受付時間／8:00〜17:00（日曜は除く）</p>
+  </div>
+</section>
+
+<footer class="ft">
+  <p>&copy; 2018 TOBI TERASAKI-GUMI Co.,Ltd. ／ <a href="terasaki-index.html">トップページへ戻る</a></p>
+</footer>
+
+<div class="lb" id="lb">
+  <button class="close" id="lbClose" aria-label="閉じる">&times;</button>
+  <button class="nav prev" id="lbPrev" aria-label="前の写真">&#8249;</button>
+  <img id="lbImg" src="" alt="">
+  <button class="nav next" id="lbNext" aria-label="次の写真">&#8250;</button>
+  <div class="cnt" id="lbCnt"></div>
+</div>
+
+<script>
+(function(){
+  'use strict';
+  document.querySelectorAll('img').forEach(function(img){
+    var hide=function(){img.closest('.gitem, .phero')&&(img.style.display='none')};
+    if(img.complete && img.naturalWidth===0) hide();
+    else img.addEventListener('error',hide,{once:true});
+  });
+
+  var targets=document.querySelectorAll('.up');
+  var reveal=function(el){el.classList.add('in')};
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){reveal(e.target); io.unobserve(e.target);} });
+    },{threshold:.08});
+    targets.forEach(function(el){io.observe(el)});
+  } else { targets.forEach(reveal); }
+
+  // filters
+  var chips = document.querySelectorAll('.chip');
+  var items = Array.from(document.querySelectorAll('.gitem'));
+  chips.forEach(function(chip){
+    chip.addEventListener('click', function(){
+      chips.forEach(function(c){ c.classList.remove('active') });
+      chip.classList.add('active');
+      var f = chip.dataset.f;
+      items.forEach(function(it){
+        it.classList.toggle('hide', f!=='all' && it.dataset.cat!==f);
+      });
+    });
+  });
+
+  // lightbox
+  var lb=document.getElementById('lb'), lbImg=document.getElementById('lbImg'), lbCnt=document.getElementById('lbCnt');
+  var current = 0;
+  function visibleItems(){ return items.filter(function(it){ return !it.classList.contains('hide') }); }
+  function openLb(idx){
+    var vis = visibleItems();
+    current = idx;
+    var it = vis[current];
+    if(!it) return;
+    lbImg.src = it.querySelector('img').src;
+    lbImg.alt = it.querySelector('img').alt;
+    lbCnt.textContent = (current+1) + ' / ' + vis.length;
+    lb.classList.add('open');
+  }
+  items.forEach(function(it){
+    it.addEventListener('click', function(e){
+      e.preventDefault();
+      var vis = visibleItems();
+      openLb(vis.indexOf(it));
+    });
+  });
+  function step(d){
+    var vis = visibleItems();
+    current = (current + d + vis.length) % vis.length;
+    openLb(current);
+  }
+  document.getElementById('lbPrev').addEventListener('click', function(){ step(-1) });
+  document.getElementById('lbNext').addEventListener('click', function(){ step(1) });
+  document.getElementById('lbClose').addEventListener('click', function(){ lb.classList.remove('open') });
+  lb.addEventListener('click', function(e){ if(e.target===lb) lb.classList.remove('open') });
+  document.addEventListener('keydown', function(e){
+    if(!lb.classList.contains('open')) return;
+    if(e.key==='Escape') lb.classList.remove('open');
+    if(e.key==='ArrowLeft') step(-1);
+    if(e.key==='ArrowRight') step(1);
+  });
+})();
+</script>
+</body>
+</html>

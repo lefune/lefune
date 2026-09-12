@@ -41,8 +41,9 @@ h1,h2,h3{ font-family:var(--zen); font-weight:700; line-height:1.4 }
 /* header */
 .hd{ position:sticky; top:0; z-index:1100; background:var(--navy-2); color:#fff }
 .hd-top{ display:flex; align-items:center; justify-content:space-between; height:66px; padding-inline:var(--pad) }
-.hd .logo{ display:flex; align-items:center; gap:10px; font-family:var(--zen); font-weight:900; font-size:19px; letter-spacing:.02em }
-.hd .logo .swoosh{ width:30px; height:30px; border-radius:50%; background:linear-gradient(135deg,var(--gold),#8a95a8); display:grid; place-items:center; color:var(--navy-2); font-size:15px; font-weight:900 }
+.hd .logo{ display:flex; align-items:center }
+.logo-plate{ display:inline-flex; align-items:center; background:#fdfcfa; border-radius:8px; padding:6px 14px; box-shadow:0 1px 3px rgba(0,0,0,.25) }
+.logo-plate img{ display:block; height:26px; width:auto }
 .hd .related{ font-size:12px; color:rgba(255,255,255,.6) }
 .hd .related a{ color:var(--gold); font-weight:700 }
 .catnav{ display:flex; gap:2px; overflow-x:auto; border-top:1px solid rgba(255,255,255,.1); -webkit-overflow-scrolling:touch }
@@ -56,7 +57,8 @@ h1,h2,h3{ font-family:var(--zen); font-weight:700; line-height:1.4 }
   background-image:radial-gradient(circle at 18% 20%, rgba(217,164,65,.16), transparent 40%),
                     radial-gradient(circle at 85% 75%, rgba(255,255,255,.06), transparent 45%); }
 .hero .inner{ position:relative; z-index:2; text-align:center }
-.hero .brandmark{ width:64px; height:64px; margin-inline:auto 18px; border-radius:50%; background:linear-gradient(135deg,var(--gold),#8a95a8); display:grid; place-items:center; color:var(--navy-2); font-family:var(--zen); font-weight:900; font-size:28px }
+.hero .brandmark{ display:inline-flex; margin-inline:auto; margin-bottom:22px; background:#fdfcfa; border-radius:12px; padding:14px 22px; box-shadow:0 4px 16px rgba(0,0,0,.25) }
+.hero .brandmark img{ display:block; height:44px; width:auto }
 .hero .kicker{ font-size:13px; letter-spacing:.28em; text-transform:uppercase; color:var(--gold); font-weight:700; margin-bottom:16px }
 .hero h1{ font-size:clamp(26px,4vw,38px); text-wrap:balance }
 .hero p{ max-width:600px; margin:20px auto 0; color:rgba(255,255,255,.85); line-height:2.1 }
@@ -126,7 +128,7 @@ section[id]{ scroll-margin-top:112px }
 
 <header class="hd">
   <div class="hd-top">
-    <div class="logo"><span class="swoosh">F</span>Flap Co.,Ltd.</div>
+    <div class="logo"><span class="logo-plate"><img src="images/flap/logo.png" alt="Flap Co.,Ltd."></span></div>
     <div class="related">関連会社：<a href="terasaki-index.html">株式会社 鳶寺﨑組</a></div>
   </div>
   <nav class="catnav" aria-label="商品カテゴリ">
@@ -141,7 +143,7 @@ section[id]{ scroll-margin-top:112px }
 
 <section class="hero pad">
   <div class="wrap inner">
-    <div class="brandmark">F</div>
+    <div class="brandmark"><img src="images/flap/logo.png" alt="Flap Co.,Ltd."></div>
     <p class="kicker">Bousai Goods</p>
     <h1>防災商品グッズの販売</h1>
     <p>災害大国日本に住む私たち。万が一のときに用意しておきたい防災グッズ、防災用品。何を用意したらいいか分からない方のために、最低限必要なものを揃えたおすすめの防災セットを取り揃えました。</p>

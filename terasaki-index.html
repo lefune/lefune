@@ -67,8 +67,9 @@ h1,h2,h3,h4{ font-weight:900; line-height:1.35 }
   transition:box-shadow .4s;
 }
 .hd.on{ box-shadow:0 2px 18px rgba(0,0,0,.25) }
-.hd .logo{ display:flex; align-items:center; gap:10px; font-weight:900; font-size:16px; letter-spacing:.02em; white-space:nowrap }
-.hd .logo .mk{ width:30px; height:30px; border:2px solid var(--orange); border-radius:50%; display:grid; place-items:center; font-size:13px; color:var(--orange); font-weight:900 }
+.hd .logo{ display:flex; align-items:center; white-space:nowrap }
+.logo-plate{ display:inline-flex; align-items:center; background:#fdfcfa; border-radius:8px; padding:6px 12px; box-shadow:0 1px 3px rgba(0,0,0,.25) }
+.logo-plate img{ display:block; height:32px; width:auto }
 .hd nav{ display:flex; align-items:center; gap:clamp(10px,1.6vw,26px) }
 .hd nav a{ font-size:14px; font-weight:500; letter-spacing:.02em; white-space:nowrap }
 .hd nav a:hover{ color:var(--orange-2) }
@@ -183,8 +184,8 @@ body.open{ overflow:hidden }
 /* ── footer ── */
 .ft{ background:var(--blue-ink); color:rgba(255,255,255,.72); padding-block:56px 26px }
 .ft-top{ display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:36px; padding-bottom:36px; border-bottom:1px solid var(--line-2) }
-.ft .brand{ display:flex; align-items:center; gap:10px; color:#fff; font-weight:900; font-size:18px; margin-bottom:14px }
-.ft .brand .mk{ width:28px; height:28px; border:2px solid var(--orange); border-radius:50%; display:grid; place-items:center; font-size:12px; color:var(--orange); font-weight:900 }
+.ft .brand{ display:flex; align-items:center; margin-bottom:16px }
+.ft .brand .logo-plate img{ height:30px }
 .ft address{ font-style:normal; font-size:13.5px; line-height:2 }
 .ft h5{ font-size:12.5px; letter-spacing:.16em; color:var(--orange-2); margin-bottom:14px; font-weight:700 }
 .ft .office{ margin-bottom:18px }
@@ -220,7 +221,7 @@ body.open{ overflow:hidden }
 <body>
 
 <header class="hd" id="hd">
-  <a href="#top" class="logo"><span class="mk">鳶</span>株式会社 鳶寺﨑組</a>
+  <a href="#top" class="logo"><span class="logo-plate"><img src="images/terasaki/logo.png" alt="株式会社 鳶寺﨑組"></span></a>
   <nav class="pc" aria-label="メインメニュー">
     <a href="#mission">安全への取組み</a>
     <a href="#works">施工実績</a>
@@ -385,7 +386,7 @@ body.open{ overflow:hidden }
   <div class="wrap">
     <div class="ft-top">
       <div>
-        <div class="brand"><span class="mk">鳶</span>株式会社 鳶寺﨑組</div>
+        <div class="brand"><span class="logo-plate"><img src="images/terasaki/logo.png" alt="株式会社 鳶寺﨑組"></span></div>
         <address>枠組・クサビ式足場の組立・工事<br>施工エリア：静岡県・神奈川県・東京都・千葉県・埼玉県</address>
       </div>
       <div>
